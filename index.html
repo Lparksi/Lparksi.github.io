@@ -1,0 +1,402 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Parksi</title>
+<!-- 开始加载百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a6a151fd8556c58620720ff3fe34f940";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- 结束加载百度统计 -->
+<link rel="shortcut icon" href="https://www.parksi.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://www.parksi.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://www.parksi.top/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Parksi - Atom Feed" href="https://www.parksi.top/atom.xml">
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156593805-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-156593805-2');
+  </script>
+    
+
+  <meta name="description" content="半真半假，半信半疑。
+" />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    </div>
+  </div>
+  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        首页
+      </a>
+    
+      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        归档
+      </a>
+    
+      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        标签
+      </a>
+    
+      <a href="/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        关于
+      </a>
+    
+    <a href="https://www.parksi.top/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      RSS
+    </a>
+  </nav>
+</div>
+
+
+    <div class="max-w-4xl w-full mx-auto ">
+      
+        <header class="flex py-16 md:py-32 mt-12 flex-col md:flex-row px-4 md:px-0 animated fadeIn">
+  <div class="flex-1 order-2 md:order-1 md:pr-16">
+    <div class="text-4xl font-bold text-center md:text-left">
+      Parksi
+    </div>
+    <div class="text-xl text-gray-500 mt-4 text-center md:text-left">
+      半真半假，半信半疑。
+
+    </div>
+    
+      <div class="mt-8 text-center md:text-left">
+        <a
+          href="http://shang.qq.com/wpa/qunwpa?idkey=495c8725f2c840f89e9e16c775ced3d15f63b792cb50e04bee0638092be56297" 
+          arget="_blank"
+          class="text-sm bg-yellow-50 dark:bg-indigo-500 dark:text-gray-700 font-semibold px-4 py-2 inline-block yellow-btn transition-fast rounded"
+        >LET&#39;S TALK!</a>
+      </div>
+    
+    
+      <div class="mt-8 flex items-center">
+        
+          <div class="text-gray-500 mr-2">
+            Follow me 👉
+          </div>
+        
+        
+          
+            
+              <div class="relative mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 transition-fast dark:hover:bg-gray-600 wechat">
+                <i class="ri-wechat-line"></i>
+                <img src="\media\images\custom-wechat.png" alt="" class="absolute left-0 w-32" style="max-width: initial; top: 100%;" >
+              </div>
+            
+          
+        
+          
+            
+              <a href="mailto:Parksi@parksi.top" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+                <i class="ri-mail-line"></i>
+              </a>
+            
+          
+        
+          
+            
+              <a href="https://github.com/Lparksi" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+                <i class="ri-github-line"></i>
+              </a>
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+              <a href="//shang.qq.com/wpa/qunwpa?idkey=495c8725f2c840f89e9e16c775ced3d15f63b792cb50e04bee0638092be56297" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+                <i class="ri-qq-line"></i>
+              </a>
+            
+          
+        
+      </div>
+    
+  </div>
+  <div class="md:mx-8 flex-shrink-0 self-start rounded-full border-4 border-dotted border-transparent hover:border-yellow-50 p-2 w-32 h-32 order-1 md:order-2 mx-auto s3-dotted">
+    <img class="rounded-full object-cover" src="https://www.parksi.top/images/avatar.png?v=1597846881582" alt="Parksi" width="100%" height="100%">
+  </div>
+</header>
+      
+<!-- STRAT TO LOAD -->
+<header class="flex md:py-32 mt-12 flex-col md:flex-row px-4 md:px-0 animated fadeIn" style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px;"><div><a href="https://github.com/lparksi"><img src="https://github-readme-stats.vercel.app/api?username=lparksi&amp;hide_border=true" align="left"></a> <a href="https://github.com/lparksi"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lparksi&amp;layout=compact&amp;hide_border=true&amp;bg_color=%23faf9f7" align="left"></a></div></header>
+<!-- END TO LOAD -->
+      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://www.parksi.top/post/shi-yong-postman-diao-yong-microsoft-graph-api/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          使用postman调用Microsoft Graph API
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-08-17</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>Azure API使用OAuth2进行鉴权，我们可以使用postman进行测试。</p>
+
+      </div>
+      <a href="https://www.parksi.top/post/shi-yong-postman-diao-yong-microsoft-graph-api/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://www.parksi.top/post/guo-nei-yong-hu-jia-su-fang-wen-kai-yuan-xiang-mu/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          国内用户加速访问开源项目
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-08-13</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        前言
+国内进行GitHub clone，正常Linux用户的软件包安装，Python开源库pypi的使用，都会由于不稳定的网络环境使用体验极差  。
+本文将解决：
+
+GitHub clone
+Linux软件包下载
+pypi 下载
+常用Lin...
+      </div>
+      <a href="https://www.parksi.top/post/guo-nei-yong-hu-jia-su-fang-wen-kai-yuan-xiang-mu/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://www.parksi.top/post/silk-wen-jian-jie-ma-qi-andbian-ma-qi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          SILK文件：解码器&amp;编码器
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-08-07</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>silk是微软为Skype开发的音乐文件格式，腾讯的QQ/微信 也在使用。<br>
+同时这也是CQHTTP插件发送语音的要求格式.</p>
+
+      </div>
+      <a href="https://www.parksi.top/post/silk-wen-jian-jie-ma-qi-andbian-ma-qi/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://www.parksi.top/post/cong-ku-q-dao-mirai-cqhttp-yong-hu-de-wu-nai/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          从酷Q到Mirai--CQHTTP用户的无奈
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-07-18</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>酷Q虽好，但不是每个人都买得起Pro版</p>
+
+      </div>
+      <a href="https://www.parksi.top/post/cong-ku-q-dao-mirai-cqhttp-yong-hu-de-wu-nai/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://www.parksi.top/post/mian-fei-de-frplai-he-ji-you-yi-qi-da-you-xi-ba/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          免费的FRP！来和基友一起打游戏吧！
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-07-13</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>玩MC的朋友可能知道，mc的联机是依赖ip通信的，这可难坏了国内没有公网ip的同学，本文让我们使用frp（内网穿透）来解决这个棘手的问题吧.</p>
+
+      </div>
+      <a href="https://www.parksi.top/post/mian-fei-de-frplai-he-ji-you-yi-qi-da-you-xi-ba/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://www.parksi.top/post/oneindex-shou-dong-zhu-ce-ying-yong/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Oneindex手动注册应用
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-07-12</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>近期有搭建oneindex的用户会发现oneindex自动注册机制已经失效了，提示错误类似：Sun, 12 Jul 2020 10:23:51 GMT | ? | ? 本文将解决这个问题.</p>
+
+      </div>
+      <a href="https://www.parksi.top/post/oneindex-shou-dong-zhu-ce-ying-yong/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://www.parksi.top/post/zai-xian-chu-li-zui-da-zi-lie-he-wen-ti/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          在线处理：最大子列和问题
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-07-08</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        问题
+给出一个List，求出在这个List中连续几个子列和最大时，最大的子列和的值。
+I/O
+In:列表 A[]，列表长度N
+Out:列表A的最大子列和
+算法实现
+int MaxSubaseqSum(int A[], int N)
+/* 求...
+      </div>
+      <a href="https://www.parksi.top/post/zai-xian-chu-li-zui-da-zi-lie-he-wen-ti/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://www.parksi.top/post/zhong-ji-dou-luo-or19-or-1142-1156wan-jie/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          终极斗罗 |19 | 1142-1156（完结）
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-06-13</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        【第十九册】1142-1156（完结）
+第1143章 仙灵之气
+黄良伟一向强势，这下还真被罗镧问住了。换作是他，在同样的情况下会不去争抢?那是绝对不可能的。只要实力允许，他甚至会比蓝争抢得更加厉害。比赛一场场地进行，循环赛阶段，每一场比赛都...
+      </div>
+      <a href="https://www.parksi.top/post/zhong-ji-dou-luo-or19-or-1142-1156wan-jie/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://www.parksi.top/post/zhong-ji-dou-luo-or19-or-1131-1142/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          终极斗罗 |19 | 1131-1142
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-06-13</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        【第十九册】1131-1142（TXT）
+第1131章龙晶之力
+房间内的白秀秀又何尝不是紧张得双手冰凉，她突然有种庆幸的感觉，幸好现在的蓝轩宇穿着女装。你 ,, 白秀秀轻声道，“过来吧。” 嗯，好……好的。”蓝轩宇此时说话都有些结巴，他三步...
+      </div>
+      <a href="https://www.parksi.top/post/zhong-ji-dou-luo-or19-or-1131-1142/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://www.parksi.top/post/zhong-ji-dou-luo-or19-or-1113-1130/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          终极斗罗 |19 | 1113-1130
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-06-13</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        第1113章 龙神回眸
+就在这时，他眼前突然变得虚幻了，原本清朗的天空仿佛在这一刻变得混沌了似的。天空中，迷雾重重。在那迷雾之间，似乎有什么声音在呼唤他。这和他当初第一次前往天龙城时的那种感觉一模一样，而且，在这一刻，这声呼唤更加清晰。迷雾...
+      </div>
+      <a href="https://www.parksi.top/post/zhong-ji-dou-luo-or19-or-1113-1130/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+      </div>
+
+      
+  <div class="my-4 flex justify-between px-4 md:px-0">
+    
+    
+      <a href="https://www.parksi.top/page/2" class="btn btn-white">
+        下一页
+        <i class="ri-arrow-right-line ml-4"></i>
+      </a>
+    
+  </div>
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  CC-BY-NC 4.0 By <a href="//shang.qq.com/wpa/qunwpa?idkey=495c8725f2c840f89e9e16c775ced3d15f63b792cb50e04bee0638092be56297">Parksi Inc.</a>
+</footer>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://www.parksi.top/media/scripts/main.js"></script>
+</body>
+
+</html>

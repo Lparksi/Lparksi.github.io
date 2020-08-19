@@ -1,0 +1,447 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Python中使用SQL数据库 -PyMySQL - Parksi</title>
+<!-- 开始加载百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a6a151fd8556c58620720ff3fe34f940";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- 结束加载百度统计 -->
+<link rel="shortcut icon" href="https://www.parksi.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://www.parksi.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://www.parksi.top/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Python中使用SQL数据库 -PyMySQL - Parksi - Atom Feed" href="https://www.parksi.top/atom.xml">
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156593805-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-156593805-2');
+  </script>
+    
+
+  <meta name="description" content="Python是一门简单但强大的语言，本期我们来借助PyMySQL 实现python对SQL数据库的操作。
+
+准备
+pip install pymysql
+
+使用
+建立连接
+import pymysql
+s = pymysql.connect..." />
+  <meta property="og:title" content="Python中使用SQL数据库 -PyMySQL - Parksi">
+  <meta property="og:description" content="Python是一门简单但强大的语言，本期我们来借助PyMySQL 实现python对SQL数据库的操作。
+
+准备
+pip install pymysql
+
+使用
+建立连接
+import pymysql
+s = pymysql.connect..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://www.parksi.top/post/python-zhong-shi-yong-sql-shu-ju-ku-pymysql/" />
+  <meta property="og:image" content="https://www.parksi.top/images/avatar.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="Python中使用SQL数据库 -PyMySQL - Parksi">
+  <meta name="twitter:description" content="Python是一门简单但强大的语言，本期我们来借助PyMySQL 实现python对SQL数据库的操作。
+
+准备
+pip install pymysql
+
+使用
+建立连接
+import pymysql
+s = pymysql.connect...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://www.parksi.top/post/python-zhong-shi-yong-sql-shu-ju-ku-pymysql/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+ 
+  
+    <link rel="stylesheet" href="https://www.parksi.top/media/css/prism-atom-dark.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://www.parksi.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Parksi
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          Python中使用SQL数据库 -PyMySQL
+        </h1>
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">2020-04-22 · 2 min read</div>
+          
+            <a href="https://www.parksi.top/tag/a9pUTSQvtD/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Python
+            </a>
+          
+            <a href="https://www.parksi.top/tag/vxFEPDPWJh/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              SQL
+            </a>
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <p>Python是一门简单但强大的语言，本期我们来借助PyMySQL 实现python对SQL数据库的操作。</p>
+<!-- more -->
+<h2 id="准备">准备</h2>
+<pre><code class="language-sh">pip install pymysql
+</code></pre>
+<h2 id="使用">使用</h2>
+<h3 id="建立连接">建立连接</h3>
+<pre><code class="language-py">import pymysql
+s = pymysql.connect(HOST, USER, PWD, DATABASH, PORT)
+</code></pre>
+<ol>
+<li>HOST为数据库主机，如果在本地，一般为<code>127.0.0.1</code>，为str</li>
+<li>USER为用户名，为str</li>
+<li>PWD对应用户名的密码，为str</li>
+<li>DATABASH数据库，为str</li>
+<li>PORT端口，可选，缺省为3306，为int</li>
+</ol>
+<h3 id="游标">游标</h3>
+<p>每一个游标都是一个可以被操作的单位，我们执行SQL命令与接收返回数据都是通过游标实行的。</p>
+<h4 id="创建">创建</h4>
+<pre><code class="language-py">c = s.cursor()
+</code></pre>
+<p><code>c</code>就是这个游标的名称</p>
+<h4 id="关闭">关闭</h4>
+<pre><code class="language-py">c.close()
+</code></pre>
+<h3 id="执行sql语句">执行SQL语句</h3>
+<pre><code class="language-py">c.execute(SQL)
+</code></pre>
+<ol>
+<li>SQL即为执行的sql语句</li>
+<li>本方法适合固定的查询，不涉及任何变量</li>
+</ol>
+<pre><code class="language-py">c.executemany('INSERT INTO stocks VALUES (?,?,?,?,?)', (a, b, c, d))
+</code></pre>
+<ol>
+<li>单引号内即为执行的sql语句</li>
+<li>变量用<code>?</code>代替</li>
+<li>在逗号后放入变量</li>
+</ol>
+<h3 id="获取查询结果">获取查询结果</h3>
+<pre><code class="language-py">c.execute(SQL)
+c.fetchall()
+</code></pre>
+<p><strong>返回所有匹配结果，为嵌套数组</strong></p>
+<pre><code class="language-py">c.execute(SQL)
+c.fetchone()
+</code></pre>
+<p><strong>返回唯一匹配结果，为数组</strong></p>
+<pre><code class="language-py">c.execute(SQL)
+c.fetchmany(size)
+</code></pre>
+<ol>
+<li>返回指定行的数据</li>
+<li>size为返回行数，为int</li>
+</ol>
+<h3 id="事务性">事务性</h3>
+<p>SQL是事务性的，这个特性非常重要，例如银行：转账失败后不仅要加上原来减去的金额，同时也要检查被转账的账户是否操作成功。</p>
+<ul>
+<li>当操作部分成功，部分失败，可以通过回滚撤销操作<br>
+<strong>所有需要数据库做出改变的语句都需要提交</strong></li>
+</ul>
+<h4 id="提交">提交</h4>
+<pre><code class="language-py">c.executemany('INSERT INTO stocks VALUES (?,?,?,?,?)', (a, b, c, d))
+s.commit()
+</code></pre>
+<p><strong>事务操作是对数据库的不是对游标的</strong></p>
+<h4 id="回滚">回滚</h4>
+<pre><code class="language-py">s.rollback()
+</code></pre>
+<h2 id="示例">示例</h2>
+<p>一次完整事务的示例</p>
+<pre><code class="language-py">s = pymysql.connect(HOST, USER, PWD, DATABASH, PORT)
+
+c = s.cursor()
+try:
+    c.executemany('INSERT INTO stocks VALUES (?,?,?,?,?)', (a, b, c, d))
+    s.commit()
+except:
+    s.rollback()
+finally:
+    c.close()
+    s.close()
+</code></pre>
+<p>同时这也是try/except/finally的典型应用.</p>
+
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="vlaine-comment"></div>
+      
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  CC-BY-NC 4.0 By <a href="//shang.qq.com/wpa/qunwpa?idkey=495c8725f2c840f89e9e16c775ced3d15f63b792cb50e04bee0638092be56297">Parksi Inc.</a>
+</footer>
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%87%86%E5%A4%87">准备</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8">使用</a>
+<ul>
+<li><a href="#%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5">建立连接</a></li>
+<li><a href="#%E6%B8%B8%E6%A0%87">游标</a>
+<ul>
+<li><a href="#%E5%88%9B%E5%BB%BA">创建</a></li>
+<li><a href="#%E5%85%B3%E9%97%AD">关闭</a></li>
+</ul>
+</li>
+<li><a href="#%E6%89%A7%E8%A1%8Csql%E8%AF%AD%E5%8F%A5">执行SQL语句</a></li>
+<li><a href="#%E8%8E%B7%E5%8F%96%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C">获取查询结果</a></li>
+<li><a href="#%E4%BA%8B%E5%8A%A1%E6%80%A7">事务性</a>
+<ul>
+<li><a href="#%E6%8F%90%E4%BA%A4">提交</a></li>
+<li><a href="#%E5%9B%9E%E6%BB%9A">回滚</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E7%A4%BA%E4%BE%8B">示例</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://www.parksi.top/media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://www.parksi.top/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          console.log('进来了2')
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+  
+    <script type="application/javascript" src="https://unpkg.com/valine"></script>
+<script type="application/javascript">
+  new Valine({
+    el: '#vlaine-comment',
+    appId: 'cpBMoUJM4PTwe16noFlvH8Ui-MdYXbMMI',
+    appKey: '1A8t2UAFviA8qRt9YhxBxYDO',
+    pageSize: 10,
+    notify: true,
+    avatar: 'mp',
+    verify: true,
+    placeholder: '来都来了，不妨评论一下',
+    visitor: true,
+    highlight: true,
+    recordIP: true,
+  })
+</script>
+  
+  
+</body>
+
+</html>

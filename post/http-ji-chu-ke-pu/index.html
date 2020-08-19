@@ -1,0 +1,816 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>HTTP基础 科普 - Parksi</title>
+<!-- 开始加载百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a6a151fd8556c58620720ff3fe34f940";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- 结束加载百度统计 -->
+<link rel="shortcut icon" href="https://www.parksi.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://www.parksi.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://www.parksi.top/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="HTTP基础 科普 - Parksi - Atom Feed" href="https://www.parksi.top/atom.xml">
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156593805-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-156593805-2');
+  </script>
+    
+
+  <meta name="description" content="HTTP协议是常用的协议之一，也是网上冲浪的主要协议，本章让我们一同学习。
+
+简介
+HyperText Transfer Protocol(超文本传输协议，缩写HTTP)，处在应用层，是万维网的基础。
+最初设计HTTP是的目的是提供一种发布..." />
+  <meta property="og:title" content="HTTP基础 科普 - Parksi">
+  <meta property="og:description" content="HTTP协议是常用的协议之一，也是网上冲浪的主要协议，本章让我们一同学习。
+
+简介
+HyperText Transfer Protocol(超文本传输协议，缩写HTTP)，处在应用层，是万维网的基础。
+最初设计HTTP是的目的是提供一种发布..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://www.parksi.top/post/http-ji-chu-ke-pu/" />
+  <meta property="og:image" content="https://www.parksi.top/images/avatar.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="HTTP基础 科普 - Parksi">
+  <meta name="twitter:description" content="HTTP协议是常用的协议之一，也是网上冲浪的主要协议，本章让我们一同学习。
+
+简介
+HyperText Transfer Protocol(超文本传输协议，缩写HTTP)，处在应用层，是万维网的基础。
+最初设计HTTP是的目的是提供一种发布...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://www.parksi.top/post/http-ji-chu-ke-pu/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+ 
+  
+    <link rel="stylesheet" href="https://www.parksi.top/media/css/prism-atom-dark.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://www.parksi.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Parksi
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          HTTP基础 科普
+        </h1>
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">2020-04-18 · 9 min read</div>
+          
+            <a href="https://www.parksi.top/tag/Ix5-X3MUu-/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              科普
+            </a>
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <p>HTTP协议是常用的协议之一，也是网上冲浪的主要协议，本章让我们一同学习。</p>
+<!-- more -->
+<h2 id="简介">简介</h2>
+<p>HyperText Transfer Protocol(超文本传输协议，缩写HTTP)，处在应用层，是万维网的基础。<br>
+最初设计HTTP是的目的是提供一种发布和接收HTML页面的方法。<br>
+通过HTTP或者HTTPS协议请求的资源由统一资源标识符（Uniform Resource Identifiers，URI）来标识。</p>
+<h2 id="组成">组成</h2>
+<ul>
+<li>HTTP是一个客户端(用户)与服务端(网站)之间的请求与应答标准，通常使用TCP协议</li>
+<li>默认端口是80，HTTPS是443</li>
+</ul>
+<h2 id="请求方法">请求方法</h2>
+<p>请求（Request）,客户端向服务端发出请求，要求服务端返回数据(或/且执行动作)</p>
+<h3 id="get">GET</h3>
+<ul>
+<li>向指定的资源发出“显示”请求。GET方法只能读取数据，浏览器直接访问即是GET请求</li>
+</ul>
+<h3 id="head">HEAD</h3>
+<ul>
+<li>向指定的资源发出“显示资源信息”请求</li>
+<li>与GET相同，但不会返回正文</li>
+</ul>
+<h3 id="post">POST</h3>
+<ul>
+<li>向指定资源提交数据，请求服务器处理数据</li>
+<li>表单数据被编码存放在HTTP请求的body里</li>
+</ul>
+<h3 id="put">PUT</h3>
+<ul>
+<li>向指定资源位置上传最新内容</li>
+</ul>
+<h3 id="delete">DELETE</h3>
+<ul>
+<li>请求服务器删除指定资源</li>
+</ul>
+<h2 id="返回状态码">返回状态码</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">状态码</th>
+<th style="text-align:center">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1XX</td>
+<td style="text-align:center">消息已处理，需要据需处理</td>
+</tr>
+<tr>
+<td style="text-align:center">2XX</td>
+<td style="text-align:center">请求成功</td>
+</tr>
+<tr>
+<td style="text-align:center">3XX</td>
+<td style="text-align:center">重定向</td>
+</tr>
+<tr>
+<td style="text-align:center">4XX</td>
+<td style="text-align:center">客户端错误</td>
+</tr>
+<tr>
+<td style="text-align:center">5XX</td>
+<td style="text-align:center">服务器错误</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1xx">1XX</h3>
+<p>这一类型的状态码，代表请求已被接受，需要继续处理。这类响应是临时响应，只包含状态行和某些可选的响应头信息，并以空行结束。由于HTTP/1.0协议中没有定义任何1xx状态码，所以除非在某些试验条件下，服务器禁止向此类客户端发送1xx响应。 这些状态码代表的响应都是信息性的，标示客户应该采取的其他行动。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">状态码</th>
+<th style="text-align:center">英文</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">100</td>
+<td style="text-align:center">Continue</td>
+<td style="text-align:center">服务器已经接收到请求头，并且客户端应继续发送请求主体</td>
+</tr>
+<tr>
+<td style="text-align:center">101</td>
+<td style="text-align:center">Switching Protocols</td>
+<td style="text-align:center">服务器已经理解了客户端的请求，并将通过Upgrade消息头通知客户端采用不同的协议来完成这个请求。</td>
+</tr>
+<tr>
+<td style="text-align:center">101</td>
+<td style="text-align:center">Processing</td>
+<td style="text-align:center">WebDAV请求可能包含许多涉及文件操作的子请求，需要很长时间才能完成请求。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2xx">2XX</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">状态码</th>
+<th style="text-align:center">英文</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">200</td>
+<td style="text-align:center">OK</td>
+<td style="text-align:center">请求已成功</td>
+</tr>
+<tr>
+<td style="text-align:center">201</td>
+<td style="text-align:center">Created</td>
+<td style="text-align:center">请求已经被实现</td>
+</tr>
+<tr>
+<td style="text-align:center">202</td>
+<td style="text-align:center">Accepted</td>
+<td style="text-align:center">服务器已接受请求，但尚未处理。</td>
+</tr>
+<tr>
+<td style="text-align:center">203</td>
+<td style="text-align:center">Non-Authoritative Information</td>
+<td style="text-align:center">服务器是一个转换代理服务器</td>
+</tr>
+<tr>
+<td style="text-align:center">204</td>
+<td style="text-align:center">No Content</td>
+<td style="text-align:center">服务器成功处理了请求，没有返回任何内容。</td>
+</tr>
+<tr>
+<td style="text-align:center">205</td>
+<td style="text-align:center">Reset Content</td>
+<td style="text-align:center">服务器成功处理了请求，但没有返回任何内容。</td>
+</tr>
+<tr>
+<td style="text-align:center">206</td>
+<td style="text-align:center">Partial Content</td>
+<td style="text-align:center">服务器已经成功处理了部分GET请求。</td>
+</tr>
+<tr>
+<td style="text-align:center">207</td>
+<td style="text-align:center">Multi-Status</td>
+<td style="text-align:center">之后的消息体将是一个XML消息</td>
+</tr>
+<tr>
+<td style="text-align:center">208</td>
+<td style="text-align:center">Already Reported</td>
+<td style="text-align:center">DAV绑定的成员已经在（多状态）响应之前的部分被列举，且未被再次包含。</td>
+</tr>
+<tr>
+<td style="text-align:center">226</td>
+<td style="text-align:center">IM Used</td>
+<td style="text-align:center">服务器已经满足了对资源的请求，对实体请求的一个或多个实体操作的结果表示。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3xx">3XX</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">状态码</th>
+<th style="text-align:center">英文</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">300</td>
+<td style="text-align:center">Multiple Choices</td>
+<td style="text-align:center">被请求的资源有一系列可供选择的回馈信息，每个都有自己特定的地址和浏览器驱动的商议信息。用户或浏览器能够自行选择一个首选的地址进行重定向</td>
+</tr>
+<tr>
+<td style="text-align:center">301</td>
+<td style="text-align:center">Moved Permanently</td>
+<td style="text-align:center">被请求的资源已永久移动到新位置</td>
+</tr>
+<tr>
+<td style="text-align:center">302</td>
+<td style="text-align:center">Found</td>
+<td style="text-align:center">要求客户端执行临时重定向</td>
+</tr>
+<tr>
+<td style="text-align:center">303</td>
+<td style="text-align:center">See Other</td>
+<td style="text-align:center">对应当前请求的响应可以在另一个URI上被找到</td>
+</tr>
+<tr>
+<td style="text-align:center">304</td>
+<td style="text-align:center">Not Modified</td>
+<td style="text-align:center">表示资源在由请求头中的If-Modified-Since或If-None-Match参数指定的这一版本之后，未曾被修改。在这种情况下，由于客户端仍然具有以前下载的副本，因此不需要重新传输资源。</td>
+</tr>
+<tr>
+<td style="text-align:center">305</td>
+<td style="text-align:center">Use Proxy</td>
+<td style="text-align:center">被请求的资源必须通过指定的代理才能被访问</td>
+</tr>
+<tr>
+<td style="text-align:center">306</td>
+<td style="text-align:center">Switch Proxy</td>
+<td style="text-align:center">后续请求应使用指定的代理(已停用)</td>
+</tr>
+<tr>
+<td style="text-align:center">307</td>
+<td style="text-align:center">Temporary Redirect</td>
+<td style="text-align:center">在这种情况下，请求应该与另一个URI重复，但后续的请求应仍使用原始的URI。 与302相反，当重新发出原始请求时，不允许更改请求方法。</td>
+</tr>
+<tr>
+<td style="text-align:center">308</td>
+<td style="text-align:center">Permanent Redirect</td>
+<td style="text-align:center">请求和所有将来的请求应该使用另一个URI重复。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4xx">4XX</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">状态码</th>
+<th style="text-align:center">英文</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">400</td>
+<td style="text-align:center">Bad Request</td>
+<td style="text-align:center">明显的客户端错误</td>
+</tr>
+<tr>
+<td style="text-align:center">401</td>
+<td style="text-align:center">Unauthorized</td>
+<td style="text-align:center">用户没有必要的凭据</td>
+</tr>
+<tr>
+<td style="text-align:center">402</td>
+<td style="text-align:center">Payment Required</td>
+<td style="text-align:center">保留使用</td>
+</tr>
+<tr>
+<td style="text-align:center">403</td>
+<td style="text-align:center">Forbidden</td>
+<td style="text-align:center">服务器已经理解请求，但是拒绝执行它。</td>
+</tr>
+<tr>
+<td style="text-align:center">404</td>
+<td style="text-align:center">Not Found</td>
+<td style="text-align:center">请求所希望得到的资源未被在服务器上发现，最常见的错误</td>
+</tr>
+<tr>
+<td style="text-align:center">405</td>
+<td style="text-align:center">Method Not Allowed</td>
+<td style="text-align:center">请求行中指定的请求方法不能被用于请求相应的资源。</td>
+</tr>
+<tr>
+<td style="text-align:center">406</td>
+<td style="text-align:center">Not Acceptable</td>
+<td style="text-align:center">请求的资源的内容特性无法满足请求头中的条件，因而无法生成响应实体，该请求不可接受。</td>
+</tr>
+<tr>
+<td style="text-align:center">407</td>
+<td style="text-align:center">Proxy Authentication Required</td>
+<td style="text-align:center">客户端必须在代理服务器上进行身份验证</td>
+</tr>
+<tr>
+<td style="text-align:center">408</td>
+<td style="text-align:center">Request Timeout</td>
+<td style="text-align:center">请求超时</td>
+</tr>
+<tr>
+<td style="text-align:center">409</td>
+<td style="text-align:center">Conflict</td>
+<td style="text-align:center">表示因为请求存在冲突无法处理该请求</td>
+</tr>
+<tr>
+<td style="text-align:center">410</td>
+<td style="text-align:center">Gone</td>
+<td style="text-align:center">表示所请求的资源不再可用</td>
+</tr>
+<tr>
+<td style="text-align:center">411</td>
+<td style="text-align:center">Length Required</td>
+<td style="text-align:center">服务器拒绝在没有定义Content-Length头的情况下接受请求</td>
+</tr>
+<tr>
+<td style="text-align:center">412</td>
+<td style="text-align:center">Precondition Failed</td>
+<td style="text-align:center">服务器在验证在请求的头字段中给出先决条件时，没能满足其中的一个或多个。</td>
+</tr>
+<tr>
+<td style="text-align:center">413</td>
+<td style="text-align:center">Request Entity Too Large</td>
+<td style="text-align:center">服务器拒绝处理当前请求，因为该请求提交的实体数据大小超过了服务器愿意或者能够处理的范围</td>
+</tr>
+<tr>
+<td style="text-align:center">414</td>
+<td style="text-align:center">Request-URI Too Long</td>
+<td style="text-align:center">请求的URI长度超过了服务器能够解释的长度</td>
+</tr>
+<tr>
+<td style="text-align:center">415</td>
+<td style="text-align:center">Unsupported Media Type</td>
+<td style="text-align:center">请求中提交的互联网媒体类型并不是服务器中所支持的格式</td>
+</tr>
+<tr>
+<td style="text-align:center">416</td>
+<td style="text-align:center">Requested Range Not Satisfiable</td>
+<td style="text-align:center">户端已经要求文件的一部分，但服务器不能提供该部分</td>
+</tr>
+<tr>
+<td style="text-align:center">417</td>
+<td style="text-align:center">Expectation Failed</td>
+<td style="text-align:center">在请求头Expect中指定的预期内容无法被服务器满足</td>
+</tr>
+<tr>
+<td style="text-align:center">418</td>
+<td style="text-align:center">I'm a teapot</td>
+<td style="text-align:center">愚人节彩蛋</td>
+</tr>
+<tr>
+<td style="text-align:center">421</td>
+<td style="text-align:center">Misdirected Request</td>
+<td style="text-align:center">该请求针对的是无法产生响应的服务器</td>
+</tr>
+<tr>
+<td style="text-align:center">422</td>
+<td style="text-align:center">Unprocessable Entity</td>
+<td style="text-align:center">请求格式正确，但是由于含有语义错误，无法响应。</td>
+</tr>
+<tr>
+<td style="text-align:center">423</td>
+<td style="text-align:center">Locked</td>
+<td style="text-align:center">当前资源被锁定</td>
+</tr>
+<tr>
+<td style="text-align:center">424</td>
+<td style="text-align:center">Failed Dependency</td>
+<td style="text-align:center">由于之前的某个请求发生的错误，导致当前请求失败</td>
+</tr>
+<tr>
+<td style="text-align:center">425</td>
+<td style="text-align:center">Too Early</td>
+<td style="text-align:center">服务器拒绝处理在Early Data中的请求</td>
+</tr>
+<tr>
+<td style="text-align:center">426</td>
+<td style="text-align:center">Upgrade Required</td>
+<td style="text-align:center">客户端应切换到Upgrade头字段中给出的不同协议</td>
+</tr>
+<tr>
+<td style="text-align:center">428</td>
+<td style="text-align:center">Precondition Required</td>
+<td style="text-align:center">原服务器要求该请求满足一定条件</td>
+</tr>
+<tr>
+<td style="text-align:center">429</td>
+<td style="text-align:center">Too Many Requests</td>
+<td style="text-align:center">用户在给定的时间内发送了太多的请求</td>
+</tr>
+<tr>
+<td style="text-align:center">431</td>
+<td style="text-align:center">Request Header Fields Too Large</td>
+<td style="text-align:center">服务器不愿处理请求，因为一个或多个头字段过大。</td>
+</tr>
+<tr>
+<td style="text-align:center">451</td>
+<td style="text-align:center">Unavailable For Legal Reasons</td>
+<td style="text-align:center">该访问因法律的要求而被拒绝</td>
+</tr>
+</tbody>
+</table>
+<p>非官方扩充</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">状态码</th>
+<th style="text-align:center">英文</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">420</td>
+<td style="text-align:center">Enhance Your Caim</td>
+<td style="text-align:center">Twitter Search与Trends API在客户端被限速的情况下返回</td>
+</tr>
+<tr>
+<td style="text-align:center">444</td>
+<td style="text-align:center">No Response</td>
+<td style="text-align:center">Nginx上HTTP服务器扩展。服务器不向客户端返回任何信息，并关闭连接</td>
+</tr>
+<tr>
+<td style="text-align:center">450</td>
+<td style="text-align:center">Blocked by Windows Parental Controls</td>
+<td style="text-align:center">这是一个由Windows家庭控制（Microsoft）HTTP阻止的450状态代码的示例，用于信息和测试</td>
+</tr>
+<tr>
+<td style="text-align:center">494</td>
+<td style="text-align:center">Request Header Too Large</td>
+<td style="text-align:center">在错误代码431提出之前Nginx上使用的扩展HTTP代码</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5xx">5XX</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">状态码</th>
+<th style="text-align:center">英文</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">500</td>
+<td style="text-align:center">Internal Server Error</td>
+<td style="text-align:center">通用错误消息</td>
+</tr>
+<tr>
+<td style="text-align:center">501</td>
+<td style="text-align:center">Not Implemented</td>
+<td style="text-align:center">服务器不支持当前请求所需要的某个功能</td>
+</tr>
+<tr>
+<td style="text-align:center">502</td>
+<td style="text-align:center">Bad Gateway</td>
+<td style="text-align:center">作为网关或者代理工作的服务器尝试执行请求时，从上游服务器接收到无效的响应</td>
+</tr>
+<tr>
+<td style="text-align:center">503</td>
+<td style="text-align:center">Service Unavailable</td>
+<td style="text-align:center">由于临时的服务器维护或者过载，服务器当前无法处理请求</td>
+</tr>
+<tr>
+<td style="text-align:center">504</td>
+<td style="text-align:center">Gateway Timeout</td>
+<td style="text-align:center">作为网关或者代理工作的服务器尝试执行请求时，未能及时从上游服务器收到响应</td>
+</tr>
+<tr>
+<td style="text-align:center">505</td>
+<td style="text-align:center">HTTP Version Not Supported</td>
+<td style="text-align:center">服务器不支持，或者拒绝支持在请求中使用的HTTP版本</td>
+</tr>
+<tr>
+<td style="text-align:center">506</td>
+<td style="text-align:center">Variant Also Negotiates</td>
+<td style="text-align:center">代表服务器存在内部配置错误</td>
+</tr>
+<tr>
+<td style="text-align:center">507</td>
+<td style="text-align:center">Insufficient Storage</td>
+<td style="text-align:center">服务器无法存储完成请求所必须的内容</td>
+</tr>
+<tr>
+<td style="text-align:center">508</td>
+<td style="text-align:center">Loop Detected</td>
+<td style="text-align:center">服务器在处理请求时陷入死循环</td>
+</tr>
+<tr>
+<td style="text-align:center">510</td>
+<td style="text-align:center">Not Extended</td>
+<td style="text-align:center">获取资源所需要的策略并没有被满足</td>
+</tr>
+<tr>
+<td style="text-align:center">511</td>
+<td style="text-align:center">Network Authentication Required</td>
+<td style="text-align:center">客户端需要进行身份验证才能获得网络访问权限</td>
+</tr>
+</tbody>
+</table>
+<h2 id="总结">总结</h2>
+<p>有了上面的学习和参考表，你已经能了解到HTTP的请求与回复，能够根据错误码检查错误。</p>
+
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="vlaine-comment"></div>
+      
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  CC-BY-NC 4.0 By <a href="//shang.qq.com/wpa/qunwpa?idkey=495c8725f2c840f89e9e16c775ced3d15f63b792cb50e04bee0638092be56297">Parksi Inc.</a>
+</footer>
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
+<li><a href="#%E7%BB%84%E6%88%90">组成</a></li>
+<li><a href="#%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95">请求方法</a>
+<ul>
+<li><a href="#get">GET</a></li>
+<li><a href="#head">HEAD</a></li>
+<li><a href="#post">POST</a></li>
+<li><a href="#put">PUT</a></li>
+<li><a href="#delete">DELETE</a></li>
+</ul>
+</li>
+<li><a href="#%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81">返回状态码</a>
+<ul>
+<li><a href="#1xx">1XX</a></li>
+<li><a href="#2xx">2XX</a></li>
+<li><a href="#3xx">3XX</a></li>
+<li><a href="#4xx">4XX</a></li>
+<li><a href="#5xx">5XX</a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://www.parksi.top/media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://www.parksi.top/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          console.log('进来了2')
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+  
+    <script type="application/javascript" src="https://unpkg.com/valine"></script>
+<script type="application/javascript">
+  new Valine({
+    el: '#vlaine-comment',
+    appId: 'cpBMoUJM4PTwe16noFlvH8Ui-MdYXbMMI',
+    appKey: '1A8t2UAFviA8qRt9YhxBxYDO',
+    pageSize: 10,
+    notify: true,
+    avatar: 'mp',
+    verify: true,
+    placeholder: '来都来了，不妨评论一下',
+    visitor: true,
+    highlight: true,
+    recordIP: true,
+  })
+</script>
+  
+  
+</body>
+
+</html>

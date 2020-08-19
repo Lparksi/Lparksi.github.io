@@ -1,0 +1,216 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Parksi</title>
+<!-- 开始加载百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a6a151fd8556c58620720ff3fe34f940";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- 结束加载百度统计 -->
+<link rel="shortcut icon" href="https://www.parksi.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://www.parksi.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://www.parksi.top/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Parksi - Atom Feed" href="https://www.parksi.top/atom.xml">
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156593805-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-156593805-2');
+  </script>
+    
+
+  <meta name="description" content="半真半假，半信半疑。
+" />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    </div>
+  </div>
+  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        首页
+      </a>
+    
+      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        归档
+      </a>
+    
+      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        标签
+      </a>
+    
+      <a href="/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        关于
+      </a>
+    
+    <a href="https://www.parksi.top/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      RSS
+    </a>
+  </nav>
+</div>
+
+    <div class="max-w-4xl w-full mx-auto pt-32">
+      <h1 class="text-2xl font-bold pb-8 flex justify-center items-center">
+        <i class="ri-hashtag"></i>
+        PyQt5
+      </h1>
+      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://www.parksi.top/post/python-pyqt5-tu-xing-ku-xi-lie-jiao-cheng-or-chuang-kou-ju-zhong/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Python-PyQt5 图形库系列教程 | 窗口居中
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-03-16</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        前言
+本章的内容很简单，就是为了把你写的窗口居中显示，其思路是：获取屏幕分辨率-&gt;将窗口的中心店更改到屏幕的中心点
+需要的方法/函数
+
+PyQt5.QtWidgets-&gt;QDesktopWidget方法，提供了桌面信息，包括我们...
+      </div>
+      <a href="https://www.parksi.top/post/python-pyqt5-tu-xing-ku-xi-lie-jiao-cheng-or-chuang-kou-ju-zhong/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://www.parksi.top/post/tui-chu-ti-shi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Python-PyQt5 图形库系列教程 | 退出提示
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-03-16</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        简介
+一般的，我们希望保护用户的数据，为了避免用户手滑导致的不可预料后果，在用户点击右上角的“X”后进行一次询问，以确定用户是否真的希望关闭应用，那么，我们开始吧！
+自定义退出按钮
+简介
+做到这一切的前提是：你能够控制你的退出按钮，先让我们...
+      </div>
+      <a href="https://www.parksi.top/post/tui-chu-ti-shi/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://www.parksi.top/post/python-pyqt5-tu-xing-ku-xi-lie-jiao-cheng-or-ji-chu-ying-yong/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Python-PyQt5 图形库系列教程 | 消息提示框！
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-03-16</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        前言
+在上一章你已经学会了修改窗体的标题，图标，大小以及位置，接下来我们来学习一些基础的方法吧！
+提示框
+简介
+有时候我们需要给用户提供必要的提示，我们就需要添加提示框
+需要的方法/函数
+
+QToolTip.setFont()方法，设置字体...
+      </div>
+      <a href="https://www.parksi.top/post/python-pyqt5-tu-xing-ku-xi-lie-jiao-cheng-or-ji-chu-ying-yong/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://www.parksi.top/post/python-pyqt5-tu-xing-ku-xi-lie-jiao-cheng-or-jian-jie-yu-helloword/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Python-PyQt5 图形库系列教程 | 简介与HelloWord!
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-03-16</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        PyQt5 简介
+
+PyQt5是Digia的一套Qt5应用框架与Python的结合
+Q：有什么好处？
+A：有Python的地方就能运行你的软件(有桌面)，兼容性较好
+
+安装
+你应当准备好Python3.x，并在安装时勾选Add to Pat...
+      </div>
+      <a href="https://www.parksi.top/post/python-pyqt5-tu-xing-ku-xi-lie-jiao-cheng-or-jian-jie-yu-helloword/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://www.parksi.top/post/python-pyqt5-tu-xing-ku-xi-lie-jiao-cheng-or-mu-lu/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Python-PyQt5 图形库系列教程 | 目录
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-03-16</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        简介
+PyQt是Python3的一个第三方图形库，本教程适用于了解Python的新手（至少走过一遍新手教程）
+引用/参考
+PyQt中文教程
+项目地址
+如有添加引用会在这里更新，如有遗漏，请联系，谢谢！
+软件版本
+Pycharm 2019.3...
+      </div>
+      <a href="https://www.parksi.top/post/python-pyqt5-tu-xing-ku-xi-lie-jiao-cheng-or-mu-lu/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+  
+      </div>
+
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  CC-BY-NC 4.0 By <a href="//shang.qq.com/wpa/qunwpa?idkey=495c8725f2c840f89e9e16c775ced3d15f63b792cb50e04bee0638092be56297">Parksi Inc.</a>
+</footer>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://www.parksi.top/media/scripts/main.js"></script>
+</body>
+</html>
