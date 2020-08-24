@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.parksi.top</id>
     <title>Parksi</title>
-    <updated>2020-08-19T14:21:29.898Z</updated>
+    <updated>2020-08-24T09:27:21.867Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.parksi.top"/>
     <link rel="self" href="https://www.parksi.top/atom.xml"/>
@@ -11,6 +11,61 @@
     <logo>https://www.parksi.top/images/avatar.png</logo>
     <icon>https://www.parksi.top/favicon.ico</icon>
     <rights>All rights reserved 2020, Parksi</rights>
+    <entry>
+        <title type="html"><![CDATA[免费获取S/MIME证书]]></title>
+        <id>https://www.parksi.top/post/free-to-get-s-mime/</id>
+        <link href="https://www.parksi.top/post/free-to-get-s-mime/">
+        </link>
+        <updated>2020-08-24T09:25:49.000Z</updated>
+        <summary type="html"><![CDATA[<p>什么是S/MIME加密？</p>
+<p>S/MIME（Secure/MultipurposeInternet Mail Extensions），即安全/多用途网际邮件扩充协议是一种专用于公钥加密和MIME数据签名的标准协议。S/MIME 基于非对称加密，以保护您的电子邮件免受不必要的访问。它还允许您对您的电子邮件进行数字签名，以验证您是邮件的合法发件人，使其成为抵御许多网络钓鱼攻击的有效武器。这基本上是S/MIME的全部要点。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>什么是S/MIME加密？</p>
+<p>S/MIME（Secure/MultipurposeInternet Mail Extensions），即安全/多用途网际邮件扩充协议是一种专用于公钥加密和MIME数据签名的标准协议。S/MIME 基于非对称加密，以保护您的电子邮件免受不必要的访问。它还允许您对您的电子邮件进行数字签名，以验证您是邮件的合法发件人，使其成为抵御许多网络钓鱼攻击的有效武器。这基本上是S/MIME的全部要点。</p>
+<!-- more -->
+<h2 id="用途">用途</h2>
+<h3 id="签名">签名</h3>
+<p>签名：是为了让收件方验证该邮件的内容是否完整，是否篡改过<br>
+<img src="https://s1.ax1x.com/2020/08/24/drYHCF.png" alt="drYHCF.png" loading="lazy"></p>
+<h3 id="加密">加密</h3>
+<p>加密：是为了保证邮件内容的机密性<br>
+<img src="https://s1.ax1x.com/2020/08/24/drtAKA.png" alt="drtAKA.png" loading="lazy"></p>
+<h2 id="如何获取邮件证书">如何获取邮件证书</h2>
+<p>Actalis S.p.A家的免费证书，期限1年<br>
+freessl家（亚洲诚信）的收费证书，1元/3月</p>
+<ol>
+<li>进行注册<br>
+打开<a href="https://extrassl.actalis.it/portal/uapub/freemail?lang=en">https://extrassl.actalis.it/portal/uapub/freemail?lang=en</a></li>
+<li>申请验证码<br>
+<img src="https://s1.ax1x.com/2020/08/24/drNRwq.png" alt="drNRwq.png" loading="lazy"></li>
+<li>检查邮箱<br>
+<img src="https://s1.ax1x.com/2020/08/24/drUk7t.png" alt="drUk7t.png" loading="lazy"></li>
+<li>填写剩余选项<br>
+<img src="https://s1.ax1x.com/2020/08/24/drUwu9.png" alt="drUwu9.png" loading="lazy"></li>
+<li>保存私钥<br>
+<img src="https://s1.ax1x.com/2020/08/24/draQ2D.png" alt="draQ2D.png" loading="lazy"></li>
+<li>在邮件附件接收证书<br>
+<img src="https://s1.ax1x.com/2020/08/24/draIsJ.png" alt="draIsJ.png" loading="lazy"></li>
+</ol>
+<h2 id="如何使用邮件证书">如何使用邮件证书</h2>
+<p>以受支持的邮件客户端（Mozilla Thunderbird等）为例：</p>
+<ol>
+<li>解压出证书<br>
+2 .在相应的邮箱进行“端到端加密”<br>
+<img src="https://s1.ax1x.com/2020/08/24/drwm9K.png" alt="drwm9K.png" loading="lazy"></li>
+<li>导入证书<br>
+<img src="https://s1.ax1x.com/2020/08/24/drwrEn.png" alt="drwrEn.png" loading="lazy"></li>
+<li>使用证书<br>
+<img src="https://s1.ax1x.com/2020/08/24/drBkJx.png" alt="drBkJx.png" loading="lazy"><br>
+选择你的证书，输入私钥<br>
+<img src="https://s1.ax1x.com/2020/08/24/drBspV.png" alt="drBspV.png" loading="lazy"></li>
+</ol>
+<h2 id="注意">注意</h2>
+<p>若选择加密，则接收方也必须有证书并有能力对其解密，才可查看邮件内容 <strong>否则只会看到邮件标题</strong><br>
+若选择签名，则可以保证邮件在传递过程中不被第三方篡改<br>
+（二者可以同时进行）</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[使用postman调用Microsoft Graph API]]></title>
         <id>https://www.parksi.top/post/shi-yong-postman-diao-yong-microsoft-graph-api/</id>
