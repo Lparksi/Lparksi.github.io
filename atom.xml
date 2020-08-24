@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.parksi.top</id>
     <title>Parksi</title>
-    <updated>2020-08-24T09:27:21.867Z</updated>
+    <updated>2020-08-24T11:30:24.986Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.parksi.top"/>
     <link rel="self" href="https://www.parksi.top/atom.xml"/>
@@ -50,8 +50,8 @@ freessl家（亚洲诚信）的收费证书，1元/3月</p>
 <h2 id="如何使用邮件证书">如何使用邮件证书</h2>
 <p>以受支持的邮件客户端（Mozilla Thunderbird等）为例：</p>
 <ol>
-<li>解压出证书<br>
-2 .在相应的邮箱进行“端到端加密”<br>
+<li>解压出证书</li>
+<li>在相应的邮箱进行“端到端加密”<br>
 <img src="https://s1.ax1x.com/2020/08/24/drwm9K.png" alt="drwm9K.png" loading="lazy"></li>
 <li>导入证书<br>
 <img src="https://s1.ax1x.com/2020/08/24/drwrEn.png" alt="drwrEn.png" loading="lazy"></li>
@@ -59,6 +59,17 @@ freessl家（亚洲诚信）的收费证书，1元/3月</p>
 <img src="https://s1.ax1x.com/2020/08/24/drBkJx.png" alt="drBkJx.png" loading="lazy"><br>
 选择你的证书，输入私钥<br>
 <img src="https://s1.ax1x.com/2020/08/24/drBspV.png" alt="drBspV.png" loading="lazy"></li>
+</ol>
+<h2 id="如何让其他人向你发送加密邮件">如何让其他人向你发送【加密邮件】</h2>
+<p>此处的朋友为理想朋友，拥有S/MIME加密证书</p>
+<ol>
+<li>首先给你的朋友发一封邮件，只签名，不加密<br>
+<img src="https://s1.ax1x.com/2020/08/24/dsYyJU.png" alt="dsYyJU.png" loading="lazy"></li>
+<li>让你的朋友给你发一封邮件，此时朋友可选择加密或不加密<br>
+<img src="https://s1.ax1x.com/2020/08/24/dsNOat.png" alt="dsNOat.png" loading="lazy"></li>
+<li>你和你的朋友可以愉快的加密通信了</li>
+<li>（可选）可以在这里单独删除/添加 你朋友的公钥<br>
+<img src="https://s1.ax1x.com/2020/08/24/dsUYRO.png" alt="dsUYRO.png" loading="lazy"></li>
 </ol>
 <h2 id="注意">注意</h2>
 <p>若选择加密，则接收方也必须有证书并有能力对其解密，才可查看邮件内容 <strong>否则只会看到邮件标题</strong><br>
