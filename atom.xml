@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.parksi.top</id>
     <title>Parksi</title>
-    <updated>2020-09-05T15:00:20.821Z</updated>
+    <updated>2020-09-05T15:02:35.450Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.parksi.top"/>
     <link rel="self" href="https://www.parksi.top/atom.xml"/>
@@ -21,7 +21,7 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>前文我们介绍了S/MIME加密，本文我们来尝试另一种更自由，全面地OPEN GPG加密。</p>
 <!-- more -->
-<h2 id="准备">准备</h2>
+<h3 id="准备">准备</h3>
 <p>需要两个软件Kleopatra(gpg4win)和Mozilla Thunderbird<br>
 <img src="https://s1.ax1x.com/2020/09/05/wVIOzj.png" alt="wVIOzj.png" loading="lazy"></p>
 <h3 id="kleopatra">Kleopatra</h3>
