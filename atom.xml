@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.parksi.top</id>
     <title>Parksi</title>
-    <updated>2020-09-05T09:40:09.569Z</updated>
+    <updated>2020-09-05T15:00:20.821Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.parksi.top"/>
     <link rel="self" href="https://www.parksi.top/atom.xml"/>
@@ -11,6 +11,101 @@
     <logo>https://www.parksi.top/images/avatar.png</logo>
     <icon>https://www.parksi.top/favicon.ico</icon>
     <rights>All rights reserved 2020, Parksi</rights>
+    <entry>
+        <title type="html"><![CDATA[使用OPEN GPG证书加密任何文件]]></title>
+        <id>https://www.parksi.top/post/Encrypt-any-file-with-OPEN-GPG-certificate/</id>
+        <link href="https://www.parksi.top/post/Encrypt-any-file-with-OPEN-GPG-certificate/">
+        </link>
+        <updated>2020-09-05T14:58:10.000Z</updated>
+        <summary type="html"><![CDATA[<p>前文我们介绍了S/MIME加密，本文我们来尝试另一种更自由，全面地OPEN GPG加密。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>前文我们介绍了S/MIME加密，本文我们来尝试另一种更自由，全面地OPEN GPG加密。</p>
+<!-- more -->
+<h2 id="准备">准备</h2>
+<p>需要两个软件Kleopatra(gpg4win)和Mozilla Thunderbird<br>
+<img src="https://s1.ax1x.com/2020/09/05/wVIOzj.png" alt="wVIOzj.png" loading="lazy"></p>
+<h3 id="kleopatra">Kleopatra</h3>
+<ol>
+<li>前往官网<a href="https://www.gpg4win.org/">https://www.gpg4win.org/</a><br>
+或<a href="https://parksi.lanzous.com/i4y4Mgdraja">蓝奏云</a>下载</li>
+<li>一路默认安装完成</li>
+</ol>
+<h3 id="mozilla-thunderbird">Mozilla Thunderbird</h3>
+<ol>
+<li>前往官网<a href="https://www.thunderbird.net/zh-CN/">https://www.thunderbird.net/zh-CN/</a>下载</li>
+<li>一路默认安装完成</li>
+</ol>
+<h3 id="创建密钥对">创建密钥对</h3>
+<ol>
+<li>打开Kleopatra</li>
+<li><img src="https://s1.ax1x.com/2020/09/05/wVTLKs.png" alt="wVTLKs.png" loading="lazy"></li>
+<li>输入个人信息，如有需要可以调高密钥安全等级<img src="https://s1.ax1x.com/2020/09/05/wV7aRg.png" alt="wV7aRg.png" loading="lazy"></li>
+</ol>
+<blockquote>
+<p>我并不建议创建无时间限制的证书，这将导致一些不必要的麻烦，建议使用默认的2年期限</p>
+</blockquote>
+<ol start="4">
+<li>输入用于加密私钥的密码<img src="https://s1.ax1x.com/2020/09/05/wV74y9.png" alt="wV74y9.png" loading="lazy"></li>
+<li>完成<img src="https://s1.ax1x.com/2020/09/05/wV7LWD.png" alt="wV7LWD.png" loading="lazy"></li>
+<li>导出私钥<img src="https://s1.ax1x.com/2020/09/05/wVHASg.png" alt="wVHASg.png" loading="lazy"></li>
+</ol>
+<h3 id="使用mozilla-thunderbird与你的朋友发送加密邮件">使用Mozilla Thunderbird与你的朋友发送加密邮件</h3>
+<ol>
+<li><img src="https://s1.ax1x.com/2020/09/05/wVHDpD.png" alt="wVHDpD.png" loading="lazy"><img src="https://s1.ax1x.com/2020/09/05/wVHq7q.png" alt="wVHq7q.png" loading="lazy"><img src="https://s1.ax1x.com/2020/09/05/wVbSc4.png" alt="wVbSc4.png" loading="lazy"></li>
+<li>选中密钥<img src="https://s1.ax1x.com/2020/09/05/wVbMDA.png" alt="wVbMDA.png" loading="lazy"></li>
+<li>给你的朋友发送一封邮件，选择【对此消息数字签名】与【附上我的公钥】<img src="https://s1.ax1x.com/2020/09/05/wVbOrd.png" alt="wVbOrd.png" loading="lazy"></li>
+<li><img src="https://s1.ax1x.com/2020/09/05/wVLMkt.png" alt="wVLMkt.png" loading="lazy"></li>
+</ol>
+<blockquote>
+<p>对方视角，感谢<a href="https://tangzhiqian.cn/">ZiKin</a>提供的协助<br>
+导入公钥<img src="https://s1.ax1x.com/2020/09/05/wVOCuQ.png" alt="wVOCuQ.png" loading="lazy"><br>
+选择信任证书<img src="https://s1.ax1x.com/2020/09/05/wVjx9x.png" alt="wVjx9x.png" loading="lazy"></p>
+</blockquote>
+<ol start="5">
+<li>导入对方证书<img src="https://s1.ax1x.com/2020/09/05/wVvMDg.png" alt="wVvMDg.png" loading="lazy"></li>
+<li>信任对方证书<img src="https://s1.ax1x.com/2020/09/05/wVvJCq.png" alt="wVvJCq.png" loading="lazy"></li>
+<li>信息安全正常<img src="https://s1.ax1x.com/2020/09/05/wVvWrD.png" alt="wVvWrD.png" loading="lazy"></li>
+</ol>
+<h3 id="mozilla-thunderbird的证书管理">Mozilla Thunderbird的证书管理</h3>
+<p><img src="https://s1.ax1x.com/2020/09/05/wVvOsS.png" alt="wVvOsS.png" loading="lazy"><br>
+在此能够选择信任对方的证书<br>
+<img src="https://s1.ax1x.com/2020/09/05/wVx9Gq.png" alt="wVx9Gq.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/09/05/wVxeo9.png" alt="wVxeo9.png" loading="lazy"></p>
+<h3 id="kleopatra导入其他人的公钥">Kleopatra导入其他人的公钥</h3>
+<blockquote>
+<p>公钥能够使别人加密成<em>只有你能能打开地加密文件</em>，打个比方，公钥是锁，私钥是钥匙，只有私钥能够解密你的消息。</p>
+</blockquote>
+<ol>
+<li>让你的朋友导出公钥<img src="https://s1.ax1x.com/2020/09/05/wZSfqU.png" alt="wZSfqU.png" loading="lazy"></li>
+<li>你导入他的公钥<img src="https://s1.ax1x.com/2020/09/05/wZSOsK.png" alt="wZSOsK.png" loading="lazy"><img src="https://s1.ax1x.com/2020/09/05/wZSvZD.png" alt="wZSvZD.png" loading="lazy"></li>
+</ol>
+<h3 id="使用kleopatra加密其他文件">使用Kleopatra加密其他文件</h3>
+<ol>
+<li><img src="https://s1.ax1x.com/2020/09/05/wVx0Qf.png" alt="wVx0Qf.png" loading="lazy"></li>
+<li>如果不选择加密，文件将能被任何人打开，并得知：你是文档的作者、文档未被其他人修改过<img src="https://s1.ax1x.com/2020/09/05/wVxXSx.png" alt="wVxXSx.png" loading="lazy"></li>
+</ol>
+<blockquote>
+<p>效果<img src="https://s1.ax1x.com/2020/09/05/wVzE1P.png" alt="wVzE1P.png" loading="lazy"></p>
+</blockquote>
+<ol start="3">
+<li>如果选择加密，文件仅能由你打开(拥有证书+私钥的人)<img src="https://s1.ax1x.com/2020/09/05/wVzgBD.png" alt="wVzgBD.png" loading="lazy"></li>
+</ol>
+<blockquote>
+<p>效果<img src="https://s1.ax1x.com/2020/09/05/wVzJXT.png" alt="wVzJXT.png" loading="lazy"></p>
+</blockquote>
+<ol start="4">
+<li>如果选择密码加密，文件能够由拥有你所选择公钥的拥有者和拥有密码的人打开<img src="https://s1.ax1x.com/2020/09/05/wVzqHg.png" alt="wVzqHg.png" loading="lazy"></li>
+</ol>
+<blockquote>
+<p>效果<img src="https://s1.ax1x.com/2020/09/05/wZSPDU.png" alt="wZSPDU.png" loading="lazy"></p>
+</blockquote>
+<h3 id="思考">思考</h3>
+<ol>
+<li>相比于依赖证书颁发机构(CA)的SSL/TLS / S/MIME证书，OPEN GPG能够自主控制证书状态，有效期，吊销</li>
+<li>由于①，你需要验证你获取的【公钥】是否真的是你朋友发给你的，而不是<strong>被篡改的</strong></li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[免费获取S/MIME证书]]></title>
         <id>https://www.parksi.top/post/free-to-get-s-mime/</id>
