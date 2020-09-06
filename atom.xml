@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.parksi.top</id>
     <title>Parksi</title>
-    <updated>2020-09-05T15:52:02.863Z</updated>
+    <updated>2020-09-06T02:44:39.065Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.parksi.top"/>
     <link rel="self" href="https://www.parksi.top/atom.xml"/>
@@ -17,9 +17,9 @@
         <link href="https://www.parksi.top/post/Encrypt-any-file-with-OPEN-GPG-certificate/">
         </link>
         <updated>2020-09-05T14:58:10.000Z</updated>
-        <summary type="html"><![CDATA[<p>前文我们介绍了S/MIME加密，本文我们来尝试另一种更自由，全面地OPEN GPG加密。</p>
+        <summary type="html"><![CDATA[<p>前文我们介绍了S/MIME加密，本文我们来尝试另一种更自由，全面的OPEN GPG加密。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>前文我们介绍了S/MIME加密，本文我们来尝试另一种更自由，全面地OPEN GPG加密。</p>
+        <content type="html"><![CDATA[<p>前文我们介绍了S/MIME加密，本文我们来尝试另一种更自由，全面的OPEN GPG加密。</p>
 <!-- more -->
 <h3 id="准备">准备</h3>
 <p>需要两个软件Kleopatra(gpg4win)和Mozilla Thunderbird<br>
@@ -73,7 +73,7 @@
 <img src="https://s1.ax1x.com/2020/09/05/wVxeo9.png" alt="wVxeo9.png" loading="lazy"></p>
 <h3 id="kleopatra导入其他人的公钥">Kleopatra导入其他人的公钥</h3>
 <blockquote>
-<p>公钥能够使别人加密成<em>只有你能能打开地加密文件</em>，打个比方，公钥是锁，私钥是钥匙，只有私钥能够解密你的消息。</p>
+<p>公钥能够使别人加密成<em>只有你能能打开的加密文件</em>，打个比方，公钥是锁，私钥是钥匙，只有私钥能够解密你的消息。</p>
 </blockquote>
 <ol>
 <li>让你的朋友导出公钥<img src="https://s1.ax1x.com/2020/09/05/wZSfqU.png" alt="wZSfqU.png" loading="lazy"></li>
