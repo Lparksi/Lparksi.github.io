@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.parksi.top</id>
     <title>Parksi</title>
-    <updated>2020-09-06T07:32:35.256Z</updated>
+    <updated>2020-09-18T14:58:18.953Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.parksi.top"/>
     <link rel="self" href="https://www.parksi.top/atom.xml"/>
@@ -11,6 +11,55 @@
     <logo>https://www.parksi.top/images/avatar.png</logo>
     <icon>https://www.parksi.top/favicon.ico</icon>
     <rights>All rights reserved 2020, Parksi</rights>
+    <entry>
+        <title type="html"><![CDATA[在Ubuntu上编译安装Python3最新版]]></title>
+        <id>https://www.parksi.top/post/ubuntu-get-python/</id>
+        <link href="https://www.parksi.top/post/ubuntu-get-python/">
+        </link>
+        <updated>2020-09-18T14:54:05.000Z</updated>
+        <summary type="html"><![CDATA[<p>Python3是一个非常好的跨平台语言，众所周知，py3无法通过包管理器(apt、yum)等安装最新版，本文介绍编译安装的方式。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Python3是一个非常好的跨平台语言，众所周知，py3无法通过包管理器(apt、yum)等安装最新版，本文介绍编译安装的方式。</p>
+<!-- more -->
+<h2 id="准备环境">准备环境</h2>
+<blockquote>
+<p>为保障正常执行，请使用root用户执行命令<br>
+安装要使用的软件包</p>
+</blockquote>
+<pre><code class="language-shell">sudo apt-get install build-essential checkinstall
+sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev \
+    libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+sudo apt-get install wget
+</code></pre>
+<h2 id="下载解压编译">下载&amp;解压&amp;编译</h2>
+<ol>
+<li>前往<a href="https://www.python.org/downloads/source/">Python官网</a>获取新版本<br>
+<img src="https://s1.ax1x.com/2020/09/18/w4XAPO.png" alt="w4XAPO.png" loading="lazy"></li>
+<li>下载安装包</li>
+</ol>
+<pre><code class="language-shell">wget https://www.python.org/downloads/release/python-385/
+</code></pre>
+<ol start="3">
+<li>解压安装包</li>
+</ol>
+<pre><code class="language-shell">tar -zxvf Python-3.8-5.tgz
+</code></pre>
+<ol start="4">
+<li>授予运行权限</li>
+</ol>
+<pre><code class="language-shell">chmod +x *
+</code></pre>
+<ol start="5">
+<li>配制&amp;编译</li>
+</ol>
+<pre><code class="language-shell">./configure  --prefix=/usr/local
+make&amp;&amp;sudo make install
+</code></pre>
+<blockquote>
+<p>默认情况下，使用<strong>python3</strong>命令即可调用python3，pip3同理</p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[使用OPEN GPG证书加密任何文件]]></title>
         <id>https://www.parksi.top/post/Encrypt-any-file-with-OPEN-GPG-certificate/</id>
