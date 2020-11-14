@@ -13,7 +13,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>使用OPEN GPG证书加密任何文件 | Parksi</title>
+<title>关于河南省为学生减负失败的思考 | Parksi</title>
 
 <link rel="shortcut icon" href="https://www.parksi.top/favicon.ico?v=1605363038279">
 
@@ -122,108 +122,71 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    使用OPEN GPG证书加密任何文件
+                    关于河南省为学生减负失败的思考
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2020-09-05 ·
+                        · 2020-11-14 ·
                     </time>
                     
-                        <a href="https://www.parksi.top/tag/v2sVhEHCT/" class="post-tags">
-                            # 安全
+                        <a href="https://www.parksi.top/tag/wqCwKF6Il/" class="post-tags">
+                            # 胡思乱想
                         </a>
                     
-                        <a href="https://www.parksi.top/tag/ujfzTHj7BF/" class="post-tags">
-                            # 证书
+                        <a href="https://www.parksi.top/tag/7RZSgw_YEG/" class="post-tags">
+                            # 教育
+                        </a>
+                    
+                        <a href="https://www.parksi.top/tag/C4rj3DPkNt/" class="post-tags">
+                            # 河南
                         </a>
                     
                 </div>
                 <div class="post-content">
-                    <p>前文我们介绍了S/MIME加密，本文我们来尝试另一种更自由，全面的OPEN GPG加密。</p>
-<!-- more -->
-<h3 id="准备">准备</h3>
-<p>需要两个软件Kleopatra(gpg4win)和Mozilla Thunderbird<br>
-<img src="https://s1.ax1x.com/2020/09/05/wVIOzj.png" alt="wVIOzj.png" loading="lazy"></p>
-<h3 id="kleopatra">Kleopatra</h3>
-<ol>
-<li>前往官网<a href="https://www.gpg4win.org/">https://www.gpg4win.org/</a><br>
-或<a href="https://parksi.lanzous.com/i4y4Mgdraja">蓝奏云</a>下载</li>
-<li>一路默认安装完成</li>
-</ol>
-<h3 id="mozilla-thunderbird">Mozilla Thunderbird</h3>
-<ol>
-<li>前往官网<a href="https://www.thunderbird.net/zh-CN/">https://www.thunderbird.net/zh-CN/</a>下载</li>
-<li>一路默认安装完成</li>
-</ol>
-<h3 id="创建密钥对">创建密钥对</h3>
-<ol>
-<li>打开Kleopatra</li>
-<li><img src="https://s1.ax1x.com/2020/09/05/wVTLKs.png" alt="wVTLKs.png" loading="lazy"></li>
-<li>输入个人信息，如有需要可以调高密钥安全等级<img src="https://s1.ax1x.com/2020/09/05/wV7aRg.png" alt="wV7aRg.png" loading="lazy"></li>
-</ol>
+                    <h3 id="原由">原由</h3>
+<p>作为一名河南基层的初三学生，我很明白所谓的<em>为学生减负</em>在河南到底有多么的不受重视。</p>
+<p>我想，作为河南一名青年，我有权利来谈谈这一切。</p>
+<h3 id="根本原因为什么会失败">根本原因：为什么会失败？</h3>
+<h4 id="国家教育部">国家教育部</h4>
+<p>中华人民共和国教育部自2020-1-03发布了<a href="http://www.moe.gov.cn/jyb_xwfb/moe_2082/zl_2019n/2019_zl96/202001/t20200103_414320.html">《为学生减负的步伐坚定有力》</a> 这一篇文章，表现了教育部希望能够减轻中小学生学习负担的愿景。</p>
 <blockquote>
-<p>我并不建议创建无时间限制的证书，这将导致一些不必要的麻烦，建议使用默认的2年期限</p>
+<p>中小学生减负，是个备受关注的话题。</p>
+<p>中国家长一方面重视教育、希望孩子学习好，另一方面又希望孩子摆脱高强度的学习。在一系列减负政策的推动下，社会和家长对减负逐渐有了全面、正确的认识，对“减负并非没有负担，而是要让学生负担合理、适度”也逐渐达成共识。</p>
+<p>然而，在把校外培训机构初步纳入规范有序的轨道之后，中小学生减负仍然要走过不少坎儿。但有一点可以肯定，学生减负正与中国教育改革的步伐一起，迎难而上。</p>
 </blockquote>
-<ol start="4">
-<li>输入用于加密私钥的密码<img src="https://s1.ax1x.com/2020/09/05/wV74y9.png" alt="wV74y9.png" loading="lazy"></li>
-<li>完成<img src="https://s1.ax1x.com/2020/09/05/wV7LWD.png" alt="wV7LWD.png" loading="lazy"></li>
-<li>导出私钥<img src="https://s1.ax1x.com/2020/09/05/wVHASg.png" alt="wVHASg.png" loading="lazy"></li>
-</ol>
-<h3 id="使用mozilla-thunderbird与你的朋友发送加密邮件">使用Mozilla Thunderbird与你的朋友发送加密邮件</h3>
-<ol>
-<li><img src="https://s1.ax1x.com/2020/09/05/wVHDpD.png" alt="wVHDpD.png" loading="lazy"><img src="https://s1.ax1x.com/2020/09/05/wVHq7q.png" alt="wVHq7q.png" loading="lazy"><img src="https://s1.ax1x.com/2020/09/05/wVbSc4.png" alt="wVbSc4.png" loading="lazy"></li>
-<li>选中密钥<img src="https://s1.ax1x.com/2020/09/05/wVbMDA.png" alt="wVbMDA.png" loading="lazy"></li>
-<li>给你的朋友发送一封邮件，选择【对此消息数字签名】与【附上我的公钥】<img src="https://s1.ax1x.com/2020/09/05/wVbOrd.png" alt="wVbOrd.png" loading="lazy"></li>
-<li><img src="https://s1.ax1x.com/2020/09/05/wVLMkt.png" alt="wVLMkt.png" loading="lazy"></li>
-</ol>
+<p>但是，偌大一个中国，岂是一篇文章就能解决的？</p>
+<h4 id="学生">学生</h4>
+<p>作为河南的学子，我们很清楚自己的处境，<a href="http://www.henan.gov.cn/2020/07-25/1745161.html">《河南省2020年普通高校招生各批次录取控制分数线解读》</a> 指出：今年我省(河南省)高考报名总人数115.8万人。百万雄师过高考一道关。</p>
+<p>事实上，不仅仅是为高考努力的高中生，为中考努力的初中生还是为小升初努力的小学生。每一位河南学子都深深的清楚自己的境地。</p>
+<p>所以类似与在校老师办的辅导班之类的辅导机构(服务)是不可能从河南消失的。</p>
+<p>表：河南省某初中作息时间表</p>
+<figure data-type="image" tabindex="1"><a href="https://imgchr.com/i/DPNmXF"><img src="https://s3.ax1x.com/2020/11/14/DPNmXF.png" alt="DPNmXF.png" loading="lazy"></a></figure>
+<p>从表上看，上午6小时，下午5小时，一天11小时，非常标准。</p>
+<p>实际上呢？早上到校时间由<strong>班主任</strong>自定，一般不得晚于 6:30，晚上放学时间则是由校长亲自规定的，不得早于8:00 。这么算下来，一天不是11小时，而是12.5小时。</p>
+<p>这看上去似乎也差的不多，来看看我们的课下时光吧。</p>
+<p>图：每日作业</p>
+<figure data-type="image" tabindex="2"><a href="https://imgchr.com/i/DPNcjS"><img src="https://s3.ax1x.com/2020/11/14/DPNcjS.png" alt="DPNcjS.png" loading="lazy"></a></figure>
+<p>图：周六作业</p>
+<figure data-type="image" tabindex="3"><a href="https://imgchr.com/i/DPNhAs"><img src="https://s3.ax1x.com/2020/11/14/DPNhAs.png" alt="DPNhAs.png" loading="lazy"></a></figure>
+<p>这是我们课下时间的作业，给大家个概念：我完成所有这些书面作业所需要的时间大概要<em>2-3</em>小时，至于那些背书作业，所需要的时间不便于估计，不再列出。</p>
+<p>好，放学时间是8:00以后， 加上晚饭时间（20分钟）大概是8:30。</p>
+<p>等我写完作业，也是晚上10:30 - 11:30 了。</p>
+<p>这是我们一周六天(周日照常上课)要度过的日子，那我们的周六拿去干什么了？</p>
+<p>不知道你是否留意到上图作业的最后一行：</p>
 <blockquote>
-<p>对方视角，感谢<a href="https://tangzhiqian.cn/">ZiKin</a>提供的协助<br>
-导入公钥<img src="https://s1.ax1x.com/2020/09/05/wVOCuQ.png" alt="wVOCuQ.png" loading="lazy"><br>
-选择信任证书<img src="https://s1.ax1x.com/2020/09/05/wVjx9x.png" alt="wVjx9x.png" loading="lazy"></p>
+<p>明天下午：物理、化学</p>
 </blockquote>
-<ol start="5">
-<li>导入对方证书<img src="https://s1.ax1x.com/2020/09/05/wVvMDg.png" alt="wVvMDg.png" loading="lazy"></li>
-<li>信任对方证书<img src="https://s1.ax1x.com/2020/09/05/wVvJCq.png" alt="wVvJCq.png" loading="lazy"></li>
-<li>信息安全正常<img src="https://s1.ax1x.com/2020/09/05/wVvWrD.png" alt="wVvWrD.png" loading="lazy"></li>
-</ol>
-<h3 id="mozilla-thunderbird的证书管理">Mozilla Thunderbird的证书管理</h3>
-<p><img src="https://s1.ax1x.com/2020/09/05/wVvOsS.png" alt="wVvOsS.png" loading="lazy"><br>
-在此能够选择信任对方的证书<br>
-<img src="https://s1.ax1x.com/2020/09/05/wVx9Gq.png" alt="wVx9Gq.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/09/05/wVxeo9.png" alt="wVxeo9.png" loading="lazy"></p>
-<h3 id="kleopatra导入其他人的公钥">Kleopatra导入其他人的公钥</h3>
+<p>这便是老师办的辅导班。时间在每周六的下午1:30 - 6:00（6：30）。</p>
+<p>这大概就是我充实的每个星期了。</p>
+<h4 id="河南省教育现状">河南省教育现状</h4>
+<p>如此多学子辛苦读书，不如降低一点考试难度？</p>
 <blockquote>
-<p>公钥能够使别人加密成<em>只有你能能打开的加密文件</em>，打个比方，公钥是锁，私钥是钥匙，只有私钥能够解密你的消息。</p>
+<p>不行，考试难度降低会使教育系统选拔人才的基本作用不能实现，同分人数增多，目前在中考期间(县)名次就已是一分(3)千人，若降低难度，会导致更多人因为非智力因素考不上理想高中。</p>
+<p>事实上，在我们县，每年都有 1/3 的学子没有高中上。</p>
 </blockquote>
-<ol>
-<li>让你的朋友导出公钥<img src="https://s1.ax1x.com/2020/09/05/wZSfqU.png" alt="wZSfqU.png" loading="lazy"></li>
-<li>你导入他的公钥<img src="https://s1.ax1x.com/2020/09/05/wZSOsK.png" alt="wZSOsK.png" loading="lazy"><img src="https://s1.ax1x.com/2020/09/05/wZSvZD.png" alt="wZSvZD.png" loading="lazy"></li>
-</ol>
-<h3 id="使用kleopatra加密其他文件">使用Kleopatra加密其他文件</h3>
-<ol>
-<li><img src="https://s1.ax1x.com/2020/09/05/wVx0Qf.png" alt="wVx0Qf.png" loading="lazy"></li>
-<li>如果不选择加密，文件将能被任何人打开，并得知：你是文档的作者、文档未被其他人修改过<img src="https://s1.ax1x.com/2020/09/05/wVxXSx.png" alt="wVxXSx.png" loading="lazy"></li>
-</ol>
-<blockquote>
-<p>效果<img src="https://s1.ax1x.com/2020/09/05/wVzE1P.png" alt="wVzE1P.png" loading="lazy"></p>
-</blockquote>
-<ol start="3">
-<li>如果选择加密，文件仅能由你打开(拥有证书+私钥的人)<img src="https://s1.ax1x.com/2020/09/05/wVzgBD.png" alt="wVzgBD.png" loading="lazy"></li>
-</ol>
-<blockquote>
-<p>效果<img src="https://s1.ax1x.com/2020/09/05/wVzJXT.png" alt="wVzJXT.png" loading="lazy"></p>
-</blockquote>
-<ol start="4">
-<li>如果选择密码加密，文件能够由拥有你所选择公钥的拥有者和拥有密码的人打开<img src="https://s1.ax1x.com/2020/09/05/wVzqHg.png" alt="wVzqHg.png" loading="lazy"></li>
-</ol>
-<blockquote>
-<p>效果<img src="https://s1.ax1x.com/2020/09/05/wZSPDU.png" alt="wZSPDU.png" loading="lazy"></p>
-</blockquote>
-<h3 id="思考">思考</h3>
-<ol>
-<li>相比于依赖证书颁发机构(CA)的SSL/TLS / S/MIME证书，OPEN GPG能够自主控制证书状态，有效期，吊销</li>
-<li>由于①，你需要验证你获取的【公钥】是否真的是你朋友发给你的，而不是<strong>被篡改的</strong></li>
-</ol>
+<p>在如此基础上谈 “给学生减负” 未免有些痴人说梦。</p>
+<p>在我看来，减负与河南省的教育情况本身就已经是矛盾，如果教育部不能从根本上解决这个问题，一切对学生的好都是空谈，一切相关的措施都得不到理想的落实。</p>
+<p>为河南学生减负，这个计划从未被实施。如果它被实施了，也终将是阴奉阳违，指标不治本，也是“面子工程”，长久来看，这是给谁的面子？谁的问题能够解决？根本的问题不会被解决，只会被这样一篇篇引发的“教育部红头文件”一次次被人们关注，一次次做到“完满收官”，一次次被我们中小学生自己所抱怨，所厌恶，所反感。</p>
 
                 </div>
             </article>
@@ -232,14 +195,14 @@
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://www.parksi.top/post/free-to-get-s-mime/" class="post-title gt-a-link">
-                    免费获取S/MIME证书
+                <a href="https://www.parksi.top/post/mongodb-shang-shou-ti-yan/" class="post-title gt-a-link">
+                    MongoDB 上手体验
                 </a>
             </div>
         
 
         
-            <span id="/post/Encrypt-any-file-with-OPEN-GPG-certificate/" class="leancloud_visitors" data-flag-title="使用OPEN GPG证书加密任何文件">
+            <span id="/post/guan-yu-he-nan-sheng-wei-xue-sheng-jian-fu-shi-bai-de-si-kao/" class="leancloud_visitors" data-flag-title="关于河南省为学生减负失败的思考">
                 <em class="post-meta-item-text">阅读量 </em>
                 <i class="leancloud-visitors-count">0</i>
             </span>
