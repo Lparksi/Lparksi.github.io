@@ -30,7 +30,7 @@ var _hmt = _hmt || [];
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>Gridea | Parksi</title>
+<title>腾讯云+cloudflare启用DNSSEC | Parksi</title>
 
 <link rel="shortcut icon" href="https://www.parksi.top/favicon.ico?v=1607748392174">
 
@@ -63,11 +63,11 @@ var _hmt = _hmt || [];
     </script>
 
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
 </head>
 <body>
 <div class="main gt-bg-theme-color-first">
-    <div class="main-content">
-        <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
     <div class="navbar-brand">
         <img class="user-avatar" src="/images/avatar.png" alt="头像">
         <div class="site-name gt-c-content-color-first">
@@ -147,51 +147,154 @@ var _hmt = _hmt || [];
     </div>
 </nav>
 
-        <div class="current-tag-container">
-            <h2 class="title gt-c-content-color-first">
-                #Gridea
-            </h2>
-        </div>
-        <div class="post-list-container">
-    <div class="post-inner">
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://www.parksi.top/post/hello-gridea/">
-                            <span class="post-title gt-c-content-color-first">Hello Gridea</span>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    腾讯云+cloudflare启用DNSSEC
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-12-12 ·
+                    </time>
+                    
+                        <a href="https://www.parksi.top/tag/v2sVhEHCT/" class="post-tags">
+                            # 安全
                         </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2018-12-12 ·
-                        </time>
-                        
-                            <a href="https://www.parksi.top/tag/MQvUE7Ym1/" class="post-tag">
-                                # Gridea
-                            </a>
-                        
-                    </div>
+                    
+                        <a href="https://www.parksi.top/tag/Ix5-X3MUu-/" class="post-tags">
+                            # 科普
+                        </a>
+                    
                 </div>
-                
-                    <a href="https://www.parksi.top/post/hello-gridea/" class="post-feature-image"
-                       style="background-image: url('https://www.parksi.top/post-images/hello-gridea.png')">
-                    </a>
-                
+                <div class="post-content">
+                    <p>Make the website more secure</p>
+<!-- more -->
+<ul>
+<li>
+<p>什么是DNSSEC？</p>
+</li>
+<li>
+<p>DNSSEC 可抵御伪造的 DNS 应答。受 DNSSEC 保护的区域将通过密码进行签名，以确保收到的 DNS 记录与域所有者发布的 DNS 记录相同。</p>
+</li>
+</ul>
+<p>本文以CloudFlare(CND)+腾讯云(注册商)为例，讲解如何启用DNSSEC。</p>
+<h2 id="准备">准备</h2>
+<h3 id="在cloudflare启用">在CloudFlare启用</h3>
+<ul>
+<li>
+<p>进入域名管理页面<a href="dash.cloudflare.com">dash.cloudflare.com</a> <a href="https://imgchr.com/i/rVKTBt"><img src="https://s3.ax1x.com/2020/12/12/rVKTBt.png" alt="rVKTBt.png" loading="lazy"></a></p>
+</li>
+<li>
+<p>下拉，点击启用DNSSEC <a href="https://imgchr.com/i/rVK7HP"><img src="https://s3.ax1x.com/2020/12/12/rVK7HP.png" alt="rVK7HP.png" loading="lazy"></a></p>
+</li>
+<li>
+<p>我们先记录下以下两个值</p>
+</li>
+<li>
+<pre><code>密钥标记
+摘要
+</code></pre>
+</li>
+</ul>
+<h3 id="在腾讯云配置dnssec">在腾讯云配置DNSSEC</h3>
+<ul>
+<li>
+<p>进入<a href="https://console.cloud.tencent.com/domain">域名管理</a></p>
+</li>
+<li>
+<p>点击要启用DNSSEC域名的“管理”按钮。<a href="https://imgchr.com/i/rVKvcj"><img src="https://s3.ax1x.com/2020/12/12/rVKvcj.png" alt="rVKvcj.png" loading="lazy"></a></p>
+</li>
+<li>
+<p>进入 域名安全&gt;DNSSEC设置 <a href="https://imgchr.com/i/rVMVgJ"><img src="https://s3.ax1x.com/2020/12/12/rVMVgJ.png" alt="rVMVgJ.png" loading="lazy"></a></p>
+</li>
+<li>
+<p>点击“我已了解”(废话)<a href="https://imgchr.com/i/rVMZv9"><img src="https://s3.ax1x.com/2020/12/12/rVMZv9.png" alt="rVMZv9.png" loading="lazy"></a></p>
+</li>
+<li>
+<p>点击“添加 DNSSEC”</p>
+</li>
+<li>
+<pre><code>关键标签：密钥标记
+加密算法：ECDSA Curve P-256 with SHA-256
+摘要类型：SHA-256
+摘要：摘要
+</code></pre>
+</li>
+<li>
+<p>按照上文获取的信息填入即可</p>
+</li>
+</ul>
+<h2 id="检测">检测</h2>
+<p>错误的配置可能导致网站无法访问，通过检测可以帮助到你。</p>
+<p>打开网站：https://dnsviz.net/d/&lt;你的域名&gt;/dnssec/</p>
+<p>例如我刚刚配置好的域名：lparksi.xyz</p>
+<p>https://dnsviz.net/d/lparksi.xyz/dnssec/</p>
+<ul>
+<li>
+<p>先进行检测 <a href="https://imgchr.com/i/rVMqq1"><img src="https://s3.ax1x.com/2020/12/12/rVMqq1.png" alt="rVMqq1.png" loading="lazy"></a></p>
+</li>
+<li>
+<p>查看结果 <a href="https://imgchr.com/i/rVMjIK"><img src="https://s3.ax1x.com/2020/12/12/rVMjIK.png" alt="rVMjIK.png" loading="lazy"></a></p>
+</li>
+<li>
+<p>结果如下图所示即为成功(全是蓝色连接) <a href="https://imgchr.com/i/rVQPsA"><img src="https://s3.ax1x.com/2020/12/12/rVQPsA.png" alt="rVQPsA.png" loading="lazy"></a></p>
+</li>
+</ul>
+<p>至此，本教程结束。</p>
+<p>附录：加密对照表(来自腾讯云工单)</p>
+<figure data-type="image" tabindex="1"><a href="https://imgchr.com/i/rVQmRg"><img src="https://s3.ax1x.com/2020/12/12/rVQmRg.png" alt="rVQmRg.png" loading="lazy"></a></figure>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://www.parksi.top/post/shi-yong-go-cqhttp-dai-ti-ku-q-zuo-wei-wu-tou-ke-hu-duan/" class="post-title gt-a-link">
+                    使用go-cqhttp代替酷q作为无头客户端
+                </a>
             </div>
         
-    </div>
-</div>
-        <div class="pagination-container">
-    
-    
-</div>
+
+        
+            <span id="/post/tencent+cloudflare-dnssec/" class="leancloud_visitors" data-flag-title="腾讯云+cloudflare启用DNSSEC">
+                <em class="post-meta-item-text">阅读量 </em>
+                <i class="leancloud-visitors-count">0</i>
+            </span>
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'cpBMoUJM4PTwe16noFlvH8Ui-MdYXbMMI',
+		appKey: '1A8t2UAFviA8qRt9YhxBxYDO',
+		avatar: 'robohash',
+		pageSize: 5,
+		recordIp: true,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+
+        
 
         <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">半真半假，半信半疑。

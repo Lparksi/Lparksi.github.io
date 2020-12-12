@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.parksi.top</id>
     <title>Parksi</title>
-    <updated>2020-12-11T13:42:08.508Z</updated>
+    <updated>2020-12-12T04:46:59.341Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.parksi.top"/>
     <link rel="self" href="https://www.parksi.top/atom.xml"/>
@@ -11,6 +11,92 @@
     <logo>https://www.parksi.top/images/avatar.png</logo>
     <icon>https://www.parksi.top/favicon.ico</icon>
     <rights>All rights reserved 2020, Parksi</rights>
+    <entry>
+        <title type="html"><![CDATA[腾讯云+cloudflare启用DNSSEC]]></title>
+        <id>https://www.parksi.top/post/tencent+cloudflare-dnssec/</id>
+        <link href="https://www.parksi.top/post/tencent+cloudflare-dnssec/">
+        </link>
+        <updated>2020-12-12T04:45:13.000Z</updated>
+        <summary type="html"><![CDATA[<p>Make the website more secure</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Make the website more secure</p>
+<!-- more -->
+<ul>
+<li>
+<p>什么是DNSSEC？</p>
+</li>
+<li>
+<p>DNSSEC 可抵御伪造的 DNS 应答。受 DNSSEC 保护的区域将通过密码进行签名，以确保收到的 DNS 记录与域所有者发布的 DNS 记录相同。</p>
+</li>
+</ul>
+<p>本文以CloudFlare(CND)+腾讯云(注册商)为例，讲解如何启用DNSSEC。</p>
+<h2 id="准备">准备</h2>
+<h3 id="在cloudflare启用">在CloudFlare启用</h3>
+<ul>
+<li>
+<p>进入域名管理页面<a href="dash.cloudflare.com">dash.cloudflare.com</a> <a href="https://imgchr.com/i/rVKTBt"><img src="https://s3.ax1x.com/2020/12/12/rVKTBt.png" alt="rVKTBt.png" loading="lazy"></a></p>
+</li>
+<li>
+<p>下拉，点击启用DNSSEC <a href="https://imgchr.com/i/rVK7HP"><img src="https://s3.ax1x.com/2020/12/12/rVK7HP.png" alt="rVK7HP.png" loading="lazy"></a></p>
+</li>
+<li>
+<p>我们先记录下以下两个值</p>
+</li>
+<li>
+<pre><code>密钥标记
+摘要
+</code></pre>
+</li>
+</ul>
+<h3 id="在腾讯云配置dnssec">在腾讯云配置DNSSEC</h3>
+<ul>
+<li>
+<p>进入<a href="https://console.cloud.tencent.com/domain">域名管理</a></p>
+</li>
+<li>
+<p>点击要启用DNSSEC域名的“管理”按钮。<a href="https://imgchr.com/i/rVKvcj"><img src="https://s3.ax1x.com/2020/12/12/rVKvcj.png" alt="rVKvcj.png" loading="lazy"></a></p>
+</li>
+<li>
+<p>进入 域名安全&gt;DNSSEC设置 <a href="https://imgchr.com/i/rVMVgJ"><img src="https://s3.ax1x.com/2020/12/12/rVMVgJ.png" alt="rVMVgJ.png" loading="lazy"></a></p>
+</li>
+<li>
+<p>点击“我已了解”(废话)<a href="https://imgchr.com/i/rVMZv9"><img src="https://s3.ax1x.com/2020/12/12/rVMZv9.png" alt="rVMZv9.png" loading="lazy"></a></p>
+</li>
+<li>
+<p>点击“添加 DNSSEC”</p>
+</li>
+<li>
+<pre><code>关键标签：密钥标记
+加密算法：ECDSA Curve P-256 with SHA-256
+摘要类型：SHA-256
+摘要：摘要
+</code></pre>
+</li>
+<li>
+<p>按照上文获取的信息填入即可</p>
+</li>
+</ul>
+<h2 id="检测">检测</h2>
+<p>错误的配置可能导致网站无法访问，通过检测可以帮助到你。</p>
+<p>打开网站：https://dnsviz.net/d/&lt;你的域名&gt;/dnssec/</p>
+<p>例如我刚刚配置好的域名：lparksi.xyz</p>
+<p>https://dnsviz.net/d/lparksi.xyz/dnssec/</p>
+<ul>
+<li>
+<p>先进行检测 <a href="https://imgchr.com/i/rVMqq1"><img src="https://s3.ax1x.com/2020/12/12/rVMqq1.png" alt="rVMqq1.png" loading="lazy"></a></p>
+</li>
+<li>
+<p>查看结果 <a href="https://imgchr.com/i/rVMjIK"><img src="https://s3.ax1x.com/2020/12/12/rVMjIK.png" alt="rVMjIK.png" loading="lazy"></a></p>
+</li>
+<li>
+<p>结果如下图所示即为成功(全是蓝色连接) <a href="https://imgchr.com/i/rVQPsA"><img src="https://s3.ax1x.com/2020/12/12/rVQPsA.png" alt="rVQPsA.png" loading="lazy"></a></p>
+</li>
+</ul>
+<p>至此，本教程结束。</p>
+<p>附录：加密对照表(来自腾讯云工单)</p>
+<figure data-type="image" tabindex="1"><a href="https://imgchr.com/i/rVQmRg"><img src="https://s3.ax1x.com/2020/12/12/rVQmRg.png" alt="rVQmRg.png" loading="lazy"></a></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[使用go-cqhttp代替酷q作为无头客户端]]></title>
         <id>https://www.parksi.top/post/shi-yong-go-cqhttp-dai-ti-ku-q-zuo-wei-wu-tou-ke-hu-duan/</id>
