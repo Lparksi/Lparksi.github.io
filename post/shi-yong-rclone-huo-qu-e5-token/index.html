@@ -33,7 +33,7 @@ var _hmt = _hmt || [];
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>运维 | Parksi</title>
+<title>使用rclone获取e5 token | Parksi</title>
 
 <link rel="shortcut icon" href="https://www.parksi.top/favicon.ico?v=1612757972530">
 
@@ -66,11 +66,11 @@ var _hmt = _hmt || [];
     </script>
 
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
 </head>
 <body>
 <div class="main gt-bg-theme-color-first">
-    <div class="main-content">
-        <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
     <div class="navbar-brand">
         <img class="user-avatar" src="/images/avatar.png" alt="头像">
         <div class="site-name gt-c-content-color-first">
@@ -150,84 +150,108 @@ var _hmt = _hmt || [];
     </div>
 </nav>
 
-        <div class="current-tag-container">
-            <h2 class="title gt-c-content-color-first">
-                #运维
-            </h2>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    使用rclone获取e5 token
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-02-08 ·
+                    </time>
+                    
+                        <a href="https://www.parksi.top/tag/aGKdfzvlu/" class="post-tags">
+                            # 教程
+                        </a>
+                    
+                        <a href="https://www.parksi.top/tag/ZZ5HBIyWRg/" class="post-tags">
+                            # E5
+                        </a>
+                    
+                        <a href="https://www.parksi.top/tag/Elzjbaz-GL/" class="post-tags">
+                            # 开发工具
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>使用rclone获取E5 app的token，用于任何软件。</p>
+<!-- more -->
+<ul>
+<li>
+<p>下载<a href="https://rclone.org/downloads/">Rclone</a></p>
+</li>
+<li>
+<p>解压并进入此目录</p>
+</li>
+<li>
+<p><code>Shift+右键</code>打开PowerShell  <img src="https://s3.ax1x.com/2021/02/08/yUVLTA.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>替换以下命令中的<code>Client_ID</code>、<code>Client_secret</code>并执行</p>
+<pre><code class="language-shell">.\rclone authorize &quot;onedrive&quot; &quot;Client_ID&quot; &quot;Client_secret&quot;
+</code></pre>
+</li>
+<li>
+<p>在弹出的浏览器中登录自己的账号并授权</p>
+<figure data-type="image" tabindex="1"><img src="https://s3.ax1x.com/2021/02/08/yUZMm4.png" alt="" loading="lazy"></figure>
+</li>
+<li>
+<p>框中所显示的<code>refresh_token</code>即是我们所要的token.</p>
+</li>
+</ul>
+<figure data-type="image" tabindex="2"><img src="https://s3.ax1x.com/2021/02/08/yUZc1f.png" alt="" loading="lazy"></figure>
+
+                </div>
+            </article>
         </div>
-        <div class="post-list-container">
-    <div class="post-inner">
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://www.parksi.top/post/github-action-hexo/">
-                            <span class="post-title gt-c-content-color-first">Github action 自动构建&amp;发布Hexo博客</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>Github Action提供自动化构建，本文重点演示利用其构建并自动发布Hexo博客.</p>
 
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2021-01-25 ·
-                        </time>
-                        
-                            <a href="https://www.parksi.top/tag/Ka4PsdR7S/" class="post-tag">
-                                # hexo
-                            </a>
-                        
-                            <a href="https://www.parksi.top/tag/SBn0vtIYxS/" class="post-tag">
-                                # Github Actions
-                            </a>
-                        
-                            <a href="https://www.parksi.top/tag/08hpzB3kG/" class="post-tag">
-                                # 运维
-                            </a>
-                        
-                    </div>
-                </div>
-                
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://www.parksi.top/post/github-action-hexo/" class="post-title gt-a-link">
+                    Github action 自动构建&amp;发布Hexo博客
+                </a>
             </div>
         
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://www.parksi.top/post/shi-yong-postman-diao-yong-microsoft-graph-api/">
-                            <span class="post-title gt-c-content-color-first">使用postman调用Microsoft Graph API</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>Azure API使用OAuth2进行鉴权，我们可以使用postman进行测试。</p>
 
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-08-17 ·
-                        </time>
-                        
-                            <a href="https://www.parksi.top/tag/Elzjbaz-GL/" class="post-tag">
-                                # 开发工具
-                            </a>
-                        
-                            <a href="https://www.parksi.top/tag/08hpzB3kG/" class="post-tag">
-                                # 运维
-                            </a>
-                        
-                    </div>
-                </div>
-                
-            </div>
         
-    </div>
-</div>
-        <div class="pagination-container">
-    
-    
-</div>
+            <span id="/post/shi-yong-rclone-huo-qu-e5-token/" class="leancloud_visitors" data-flag-title="使用rclone获取e5 token">
+                <em class="post-meta-item-text">阅读量 </em>
+                <i class="leancloud-visitors-count">0</i>
+            </span>
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'cpBMoUJM4PTwe16noFlvH8Ui-MdYXbMMI',
+		appKey: '1A8t2UAFviA8qRt9YhxBxYDO',
+		avatar: 'robohash',
+		pageSize: 5,
+		recordIp: true,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+
+        
 
         <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">半真半假，半信半疑。
