@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.parksi.top</id>
     <title>Parksi</title>
-    <updated>2021-02-16T12:55:56.609Z</updated>
+    <updated>2021-02-17T14:28:35.346Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.parksi.top"/>
     <link rel="self" href="https://www.parksi.top/atom.xml"/>
@@ -11,6 +11,83 @@
     <logo>https://www.parksi.top/images/avatar.png</logo>
     <icon>https://www.parksi.top/favicon.ico</icon>
     <rights>All rights reserved 2021, Parksi</rights>
+    <entry>
+        <title type="html"><![CDATA[使用flow简化工作]]></title>
+        <id>https://www.parksi.top/post/Simplify work with power Automate/</id>
+        <link href="https://www.parksi.top/post/Simplify work with power Automate/">
+        </link>
+        <updated>2021-02-17T14:26:49.000Z</updated>
+        <content type="html"><![CDATA[<p>本文介绍使用<a href="https://flow.microsoft.com/zh-cn/"> Power Automate </a> 进行自动化的案例。如果没有合适的订阅，请转步<a href="https://www.parksi.top/post/bai-piao-ji-hua-or-office-kai-fa-ren-yuan-ji-hua/">开发者E5</a> 。</p>
+<h2 id="动机">动机</h2>
+<p>友链邮件容易漏收，需要一种更<em>自动</em> 的方式来跟进。</p>
+<h2 id="实现">实现</h2>
+<h3 id="表单">表单</h3>
+<p>从一切开始，表单选择<a href="https://forms.office.com/">MS Forms</a> （微软生态，后面有用</p>
+<p>创建一个平淡的表单。<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=U0b-smlOpk6lwFOWcJg97kpj5Pp-MQ1PuZLfWsOYCU9UMkhER0lNWVhZTU9GUzJCNUM4NTJRMlgySC4u">平淡的表单</a></p>
+<h3 id="自动化">自动化</h3>
+<ul>
+<li>
+<p>进入 <a href="https://flow.microsoft.com/zh-cn/"> Power Automate </a></p>
+</li>
+<li>
+<p>登入有权限的账户（<a href="https://www.parksi.top/post/bai-piao-ji-hua-or-office-kai-fa-ren-yuan-ji-hua/">开发者E5</a> ）</p>
+</li>
+<li>
+<p>直接新建流<img src="https://s3.ax1x.com/2021/02/17/y245NV.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>选择“自动化云端流”<img src="https://s3.ax1x.com/2021/02/17/y24XH1.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>触发器选择“提交新回复时”<img src="https://s3.ax1x.com/2021/02/17/y2593D.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>选择到刚才的表单<img src="https://s3.ax1x.com/2021/02/17/y25Br9.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>紧接着，获取详细信息（点击新步骤）<img src="https://s3.ax1x.com/2021/02/17/y2IyLj.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p><img src="https://s3.ax1x.com/2021/02/17/y25Kgg.png" alt="" loading="lazy"> 这就是我们的流程控制面板了</p>
+</li>
+<li>
+<p>选择“Office 365 Outlook”，使用“发送包含选项的电子邮件”</p>
+</li>
+<li>
+<p>显示高级选项</p>
+</li>
+<li>
+<p>主题等都可以自定义，也有各种变量可以点击使用</p>
+</li>
+<li>
+<p>我们把选项改为“yes,no”便于识别</p>
+<figure data-type="image" tabindex="1"><img src="https://s3.ax1x.com/2021/02/17/y2IhWT.png" alt="" loading="lazy"></figure>
+</li>
+<li>
+<p>接着，添加一个“控件”，输入选择“SelectedOption”（用户响应）我们令它等于yes <img src="https://s3.ax1x.com/2021/02/17/y2oP0A.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>在“如果是”里添加新操作，我们这里选择为MS TODO新建任务，选择“Outlook任务”并选中“创建任务”<img src="https://s3.ax1x.com/2021/02/17/y2ofHA.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>依旧可以自由组合<img src="https://s3.ax1x.com/2021/02/17/y2oOBj.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>接着只要点击保存即可</p>
+</li>
+</ul>
+<h2 id="测试">测试</h2>
+<h3 id="填写表单">填写表单</h3>
+<p>回到最开始的<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=U0b-smlOpk6lwFOWcJg97kpj5Pp-MQ1PuZLfWsOYCU9UMkhER0lNWVhZTU9GUzJCNUM4NTJRMlgySC4u">表单</a> 填写一个表单</p>
+<h3 id="在邮件中做出选择">在邮件中做出选择</h3>
+<p>你会收到一个带有选择的邮件，做出选择！</p>
+<figure data-type="image" tabindex="2"><img src="https://s3.ax1x.com/2021/02/17/y2TxqH.png" alt="" loading="lazy"></figure>
+<h3 id="进一步">进一步</h3>
+<p>选择yes！</p>
+<p>检查你的MS TODO应用，它已经在你的列表中！<img src="https://s3.ax1x.com/2021/02/17/y27EQS.png" alt="" loading="lazy"></p>
+<p>这一切行云流水，flow提供上百个组件（甚至包括HTTP POST），你可以利用这些组件将一些复杂的工作变得自动化。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[使用rclone获取e5 token]]></title>
         <id>https://www.parksi.top/post/shi-yong-rclone-huo-qu-e5-token/</id>
